@@ -1,8 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
+import { device } from './devices'
 
 const BioWrapper = styled.div`
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +15,8 @@ const BioWrapper = styled.div`
         padding-top: 1em;
         
     }
+
+
 `;
 
 const AboutWrapper = styled.div`
@@ -26,7 +30,7 @@ const AboutWrapper = styled.div`
         max-width: 400px;
         padding-right: 1.5em;
     }
-    @media (max-width: 768px){
+    @media ${device.mobileS}{
         flex-direction: column;
         align-items: center;
         img{
@@ -34,7 +38,11 @@ const AboutWrapper = styled.div`
         }
     }
 
-    @media (min-width: 1440px){
+    @media ${device.tablet}{
+        flex-direction: row;
+    }
+
+    @media ${device.laptopL}{
         max-width: 54vw;
     }
 

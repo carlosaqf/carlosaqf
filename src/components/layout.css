@@ -537,7 +537,7 @@ li *:last-child {
   margin-bottom: 0;
 }
 p *:last-child {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 li > p {
   margin-bottom: calc(1.45rem / 2);

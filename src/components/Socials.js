@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { device } from './devices'
 
 
 const SocialContainer = styled.div`
@@ -13,6 +14,14 @@ const SocialContainer = styled.div`
 
 const IconContainer = styled.div`
     display: flex;
+
+    @media ${device.mobileS}{
+        flex-direction: column;
+    }
+
+    @media ${device.tablet}{
+        flex-direction: row;
+    }
 `;
 
 const SocialIcon = styled.div`

@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Navbar from './Navbar'
-import Hero from './Hero'
+import Footer from './Footer'
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -31,16 +31,14 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: `100%`,
+            overflow: `hidden`,
             // padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0
           }}
         >
           <Navbar />
           <main>{children}</main>
-          <footer>
-            Carlos Fegurgur &copy; {new Date().getFullYear()}
-          </footer>
+          <Footer />
         </div>
       </>
     )}

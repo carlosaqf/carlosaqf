@@ -8,7 +8,6 @@ const ConnectContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 
     h2{
         font-size: 2em;
@@ -23,12 +22,12 @@ const ConnectContainer = styled.div`
 const FormContainer = styled.div`
     margin: 0 auto;
     background: #fafafa;
-    width: 75vw;
+    // width: 75vw;
     padding: 1em;
     border-radius: 10px;
     
     @media (max-width: 768px){
-        height: 60vh;
+        
         width: 70vw;
     }
 

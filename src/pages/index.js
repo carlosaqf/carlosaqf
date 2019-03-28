@@ -12,7 +12,9 @@ import styled from "styled-components";
 
 
 const IndexPage = () => (
-  <Layout>
+  <Layout style={{
+    overflow: `hidden`
+  }}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
     <Bio />
