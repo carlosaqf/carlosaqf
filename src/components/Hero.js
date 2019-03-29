@@ -38,7 +38,7 @@ const HeroContainer = styled.div`
         }
         
         p{
-            font-size: 0.7em;
+            font-size: 0.9em;
             letter-spacing: 0.08em;
         }
     }
@@ -65,6 +65,29 @@ const HeroContainer = styled.div`
         }
         
     }
+    @media ${device.laptop}{
+
+        h1{
+            text-transform: uppercase;
+            font-size: 9em;
+            margin-bottom: 0.1em;
+            color: #c8a415;
+        }
+        
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-weight: 400;
+            margin-bottom: 0;
+            font-size: 2.7em;
+        }
+        
+        p{
+            font-size: 2em;
+            letter-spacing: 0.08em;
+        }
+        
+    }
 `;
 
 // BUTTON DIV
@@ -73,6 +96,18 @@ const ButtonContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+
+    @media ${device.mobileS}{
+        flex-direction: column;
+    
+        a{
+            margin-top: 1em;
+        }
+    }
+
+    @media ${device.tablet}{
+        flex-direction: row;
+    } 
 `;
 
 // BUTTONS 

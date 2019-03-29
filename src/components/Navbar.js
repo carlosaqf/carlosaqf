@@ -59,6 +59,7 @@ const NavbarLinks = styled.ul`
   }
 
   a{
+    text-decoration: none;
     color: #616161;
   }
 `;
@@ -66,34 +67,29 @@ const NavbarLinks = styled.ul`
 // LINK STYLES
 
 const linkStyle ={
-  textDecoration: `none`,
   textTransform: `uppercase`,
   letterSpacing: `1.5px`,
   listStyleType: `none`
 }
 const aboutLinkStyle = {
-  textDecoration: `none`,
   padding: `0 0.8em 0 0`,
   textTransform: `uppercase`,
   letterSpacing: `1.5px`,
 }
 
 const workLinkStyle = {
-    textDecoration: `none`,
     padding: `0 0.8em 0 0.8em`,
     textTransform: `uppercase`,
     letterSpacing: `1.5px`,
 }
 
 const blogLinkStyle = {
-  textDecoration: `none`,
   padding: `0 0.8em 0 0.8em`,
   textTransform: `uppercase`,
   letterSpacing: `1.5px`,
 }
 
 const connectLinkStyle = {
-  textDecoration: `none`,
   padding: `0 0 0 0.8em`,
   textTransform: `uppercase`,
   letterSpacing: `1.5px`,
