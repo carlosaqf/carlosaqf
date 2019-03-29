@@ -1,6 +1,24 @@
 module.exports = {
   siteMetadata: {
     title: `Carlos Fegurgur`,
+    menuLinks:[
+      {
+        name:'home',
+        link:'/'
+      },
+      {
+        name:'about',
+        link:'/about'
+      },
+      {
+        name:'work',
+        link:'/work'
+      },
+      {
+        name:'blog',
+        link:'/blog'
+      }
+    ],
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@carlosaqf`,
   },

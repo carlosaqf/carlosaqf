@@ -21,6 +21,10 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            menuLinks {
+              name
+              link
+            }
           }
         }
       }
@@ -36,7 +40,7 @@ const Layout = ({ children }) => (
             paddingTop: 0
           }}
         >
-          <Navbar />
+          <Navbar menuLinks={data.site.siteMetadata.menuLinks} />
           <main>{children}</main>
           <Footer />
         </div>

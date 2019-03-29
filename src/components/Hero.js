@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
+import { device } from './devices'
 
 
 // CONTAINER
@@ -19,25 +20,50 @@ const HeroContainer = styled.div`
     
     color: white;
     text-align: center;
-
-    h1{
-        text-transform: uppercase;
-        font-size: 6em;
-        margin-bottom: 0;
-        color: #c8a415;
+    
+    @media ${device.mobileS}{
+        h1{
+            text-transform: uppercase;
+            font-size: 3em;
+            margin-bottom: 0;
+            color: #c8a415;
+        }
+        
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-weight: 400;
+            margin-bottom: 0;
+            font-size: 1em;
+        }
+        
+        p{
+            font-size: 0.7em;
+            letter-spacing: 0.08em;
+        }
     }
+    @media ${device.tablet}{
 
-    h2{
-        text-transform: uppercase;
-        letter-spacing: 0.4em;
-        font-weight: 400;
-        margin-bottom: 0;
-        font-size: 2em;
-    }
-
-    p{
-        font-size: 1.4em;
-        letter-spacing: 0.08em;
+        h1{
+            text-transform: uppercase;
+            font-size: 6em;
+            margin-bottom: 0;
+            color: #c8a415;
+        }
+        
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-weight: 400;
+            margin-bottom: 0;
+            font-size: 2em;
+        }
+        
+        p{
+            font-size: 1.4em;
+            letter-spacing: 0.08em;
+        }
+        
     }
 `;
 

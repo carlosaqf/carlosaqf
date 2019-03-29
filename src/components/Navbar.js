@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import logo from "../../public/icons/icon-48x48.png"
 import styled from "styled-components"
 
-// NAVBAR
+// NAVBAR CONTAINER
 const NavbarContainer = styled.div`
   width: 100vw;
   height: 7vh;
@@ -63,7 +63,46 @@ const NavbarLinks = styled.ul`
   }
 `;
 
-const Navbar = () => (
+// LINK STYLES
+
+const linkStyle ={
+  textDecoration: `none`,
+  textTransform: `uppercase`,
+  letterSpacing: `1.5px`,
+  listStyleType: `none`
+}
+const aboutLinkStyle = {
+  textDecoration: `none`,
+  padding: `0 0.8em 0 0`,
+  textTransform: `uppercase`,
+  letterSpacing: `1.5px`,
+}
+
+const workLinkStyle = {
+    textDecoration: `none`,
+    padding: `0 0.8em 0 0.8em`,
+    textTransform: `uppercase`,
+    letterSpacing: `1.5px`,
+}
+
+const blogLinkStyle = {
+  textDecoration: `none`,
+  padding: `0 0.8em 0 0.8em`,
+  textTransform: `uppercase`,
+  letterSpacing: `1.5px`,
+}
+
+const connectLinkStyle = {
+  textDecoration: `none`,
+  padding: `0 0 0 0.8em`,
+  textTransform: `uppercase`,
+  letterSpacing: `1.5px`,
+} 
+
+
+
+const Navbar = ({ menuLinks }) => {
+  return(
     <NavbarContainer>  
         
       {/* LOGO */}
@@ -75,43 +114,19 @@ const Navbar = () => (
 
       {/* LINKS */}
       <NavbarLinks>
-
         {/* ABOUT */}
-        <li><Link to="/about" style={{
-          textDecoration: `none`,
-          padding: `0 0.8em 0 0`,
-          textTransform: `uppercase`,
-          letterSpacing: `1.5px`,
-        }}>About</Link></li>
-
+        <li><Link to={menuLinks[1].link} style={aboutLinkStyle}>{menuLinks[1].name}</Link></li>
         {/* WORK */}
-        <li><Link to="/work" style={{
-          textDecoration: `none`,
-          padding: `0 0.8em 0 0.8em`,
-          textTransform: `uppercase`,
-          letterSpacing: `1.5px`,
-        }}>Work</Link></li>
-
+        <li><Link to={menuLinks[2].link} style={workLinkStyle}>{menuLinks[2].name}</Link></li>
         {/* BLOG */}
-        <li><Link to="/blog" style={{
-          textDecoration: `none`,
-          padding: `0 0.8em 0 0.8em`,
-          textTransform: `uppercase`,
-          letterSpacing: `1.5px`,
-        }}>Blog</Link></li>
-
+        <li><Link to={menuLinks[3].link} style={blogLinkStyle}>{menuLinks[3].name}</Link></li>
         {/* CONNECT */}
-        <li><Link to="/contact" style={{
-          textDecoration: `none`,
-          padding: `0 0 0 0.8em`,
-          textTransform: `uppercase`,
-          letterSpacing: `1.5px`,
-        }}>Connect</Link></li>
-
+        <li><Link to="/contact" style={connectLinkStyle}>Connect</Link></li>
       </NavbarLinks>
 
-  </ NavbarContainer>
-)
+    </ NavbarContainer>
+  )
+}
 
 
 export default Navbar
