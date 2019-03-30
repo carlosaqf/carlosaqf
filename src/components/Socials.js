@@ -43,6 +43,10 @@ const SocialContainer = styled.div`
 const IconContainer = styled.div`
     display: flex;
 
+    a{
+        color: black;
+    }
+
     @media ${device.mobileS}{
         flex-direction: column;
     }
@@ -52,26 +56,16 @@ const IconContainer = styled.div`
     }
 `;
 
-const SocialIcon = styled.div`
-    padding: 10px;
-    height: 3em;
-    width: 3em;
-    background: url("https://source.unsplash.com/random/70x70");
-    margin: 10px 3em;
-    border-radius: 50%;
-`;
-
-
 const Socials = () => (
 
     <SocialContainer>
         <IconContainer>
-            <GithubLogo />
-            <LinkedinLogo />
+            <a href="https://www.github.com/carlosaqf" target="_blank"><GithubLogo /></a>
+            <a href="https://www.linkedin.com/in/cfegurgur" target="_blank"><LinkedinLogo /></a>
         </IconContainer>
         <IconContainer>
-            <CodepenLogo />
-            <TwitterLogo />
+            <a href="https://www.codepen.com" target="_blank"><CodepenLogo /></a>
+            <a href="https://www.twitter.com" target="_blank"><TwitterLogo /></a>
         </IconContainer>
     </SocialContainer>
 
