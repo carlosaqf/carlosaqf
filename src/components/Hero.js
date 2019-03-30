@@ -69,7 +69,7 @@ const HeroContainer = styled.div`
 
         h1{
             text-transform: uppercase;
-            font-size: 9em;
+            font-size: 6em;
             margin-bottom: 0.1em;
             color: #c8a415;
         }
