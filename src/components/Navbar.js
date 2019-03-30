@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import logo from "../../public/icons/icon-48x48.png"
 import styled from "styled-components"
+import { device } from './devices'
 
 // NAVBAR CONTAINER
 const NavbarContainer = styled.div`
@@ -16,12 +17,15 @@ const NavbarContainer = styled.div`
   ;
   padding: 0.5em 0.8em 0 0.8em;
   align-content: center;
-  @media (max-width: 768px){
+  
+  @media ${device.mobileS}{
     grid-template-areas:
-    "logo links"
-    ;
-    grid-template-columns: repeat(2, 1fr);
+    "logo links";
+    grid-template-columns: 1fr 1fr;
+    padding-right: 0;
   }
+  
+  
 `;
 
 // LOGO
@@ -34,7 +38,12 @@ const NavbarLogo = styled.h1`
   letter-spacing: 3px;
   grid-area: logo;
 
-  @media (max-width: 768px){
+  @media ${device.mobileS}{
+    font-size: 1em;
+    padding-top: 0.2em;
+  }
+
+  @media ${device.tablet}{
     font-size: 1em;
     padding-top: 0.2em;
   }
@@ -45,57 +54,66 @@ const NavbarLogo = styled.h1`
   }
 `;
 
+const MenuName = styled(Link)`
+  
+  @media ${device.mobileS}{
+    ::after{
+        content: "F";
+    }
+  }
+
+  @media ${device.mobileL}{
+    ::after{
+      content: "AQF"
+    }
+  }
+
+  @media ${device.tablet}{
+    ::after{
+      content: "arlosaqf"
+    }
+  }
+`;
+
+
 // LINKS
 const NavbarLinks = styled.ul`
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   list-style: none;
   display: flex;
   align-items: center;
   font-family: Helvetica;
   grid-area: links;
   font-size: 1em;
-  @media (max-width: 768px){
-    font-size: 0.8em;
-  }
-
   a{
     text-decoration: none;
     color: #616161;
   }
+  @media ${device.mobileS}{
+    font-size: 0.8em;
+    a{
+      padding: 0.4em;
+    }
+  }
+
+  @media ${device.tablet}{
+    a{
+      padding: 1em;
+    }
+  }
+
+
 `;
 
 // LINK STYLES
-
-const linkStyle ={
-  textTransform: `uppercase`,
-  letterSpacing: `1.5px`,
-  listStyleType: `none`
-}
-const aboutLinkStyle = {
-  padding: `0 0.8em 0 0`,
-  textTransform: `uppercase`,
-  letterSpacing: `1.5px`,
-}
-
-const workLinkStyle = {
-    padding: `0 0.8em 0 0.8em`,
-    textTransform: `uppercase`,
-    letterSpacing: `1.5px`,
-}
-
-const blogLinkStyle = {
-  padding: `0 0.8em 0 0.8em`,
-  textTransform: `uppercase`,
-  letterSpacing: `1.5px`,
-}
-
-const connectLinkStyle = {
-  padding: `0 0 0 0.8em`,
-  textTransform: `uppercase`,
-  letterSpacing: `1.5px`,
-} 
-
-
+const MenuLink = styled(Link)`
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-top: ${props => props.top || 0}em;
+  padding-right: ${props => props.right || 0}em;
+  padding-bottom: ${props => props.bottom || 0}em;
+  padding-left: ${props => props.left || 0}em;
+`;
 
 const Navbar = ({ menuLinks }) => {
   return(
@@ -103,21 +121,21 @@ const Navbar = ({ menuLinks }) => {
         
       {/* LOGO */}
       <NavbarLogo>
-        <Link to="/">
-          Carlosaqf
-        </Link>
+        <MenuName to="/">
+          C
+        </MenuName>
       </NavbarLogo>
 
       {/* LINKS */}
       <NavbarLinks>
         {/* ABOUT */}
-        <li><Link to={menuLinks[1].link} style={aboutLinkStyle}>{menuLinks[1].name}</Link></li>
+        <li><MenuLink to={menuLinks[1].link} right="0.8">{menuLinks[1].name}</MenuLink></li>
         {/* WORK */}
-        <li><Link to={menuLinks[2].link} style={workLinkStyle}>{menuLinks[2].name}</Link></li>
+        <li><MenuLink to={menuLinks[2].link} right="0.8" left="0.8">{menuLinks[2].name}</MenuLink></li>
         {/* BLOG */}
-        <li><Link to={menuLinks[3].link} style={blogLinkStyle}>{menuLinks[3].name}</Link></li>
+        <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li>
         {/* CONNECT */}
-        <li><Link to="/contact" style={connectLinkStyle}>Connect</Link></li>
+        <li><MenuLink to="/contact" left="0.8">Connect</MenuLink></li>
       </NavbarLinks>
 
     </ NavbarContainer>

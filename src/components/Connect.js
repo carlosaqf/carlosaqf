@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Socials from './Socials'
+import { device } from './devices'
+
 
 const ConnectContainer = styled.div`
     margin: 0 auto;
@@ -14,7 +16,14 @@ const ConnectContainer = styled.div`
         letter-spacing: 0.8em;
         font-weight: 200;
         padding-top: 1em;
-        
+    }
+
+    @media ${device.mobileS}{
+        h2{
+            font-size: 1.5em;
+            letter-spacing: 0.6em;
+            text-align: center;
+        }
     }
 
 `;
@@ -25,10 +34,8 @@ const FormContainer = styled.div`
     // width: 75vw;
     padding: 1em;
     border-radius: 10px;
-    
-    @media (max-width: 768px){
-        
-        width: 70vw;
+    @media ${device.mobileS}{
+        width: 100vw;
     }
 
 `;
@@ -53,7 +60,10 @@ const Form = styled.div`
 
     textarea{
         resize: none;
-        
+    }
+
+    @media ${device.mobileS}{
+        width: 80vw;
     }
 `;
 
@@ -71,6 +81,9 @@ const ConnectButton = styled.button`
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background: #c8a415;
     color: #white;
+    @media ${device.mobileS}{
+        width: 50vw;
+    }
     
 `;
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
+import { device }  from './devices'
 
 const ProjectsContainer = styled.div`
     display: flex;
@@ -13,8 +14,15 @@ const ProjectsContainer = styled.div`
         font-size: 2em;
         letter-spacing: 0.8em;
         font-weight: 200;
-        padding-top: 1em;
-        
+        padding-top: 1em;   
+    }
+
+    @media ${device.mobileS}{
+        h2{
+            font-size: 1.5em;
+            letter-spacing: 0.6em;
+            text-align: center;
+        }
     }
 `;
 

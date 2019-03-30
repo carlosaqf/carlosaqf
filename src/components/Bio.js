@@ -13,10 +13,15 @@ const BioWrapper = styled.div`
         letter-spacing: 0.8em;
         font-weight: 200;
         padding-top: 1em;
-        
     }
 
-
+    @media ${device.mobileS}{
+        h2{
+            font-size: 1.5em;
+            letter-spacing: 0.6em;
+            text-align: center;
+        }
+    }
 `;
 
 const AboutWrapper = styled.div`
@@ -37,7 +42,6 @@ const AboutWrapper = styled.div`
             padding-right: 0;
         }
     }
-
     @media ${device.tablet}{
         flex-direction: row;
     }
