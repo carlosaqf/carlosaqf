@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Carlos Fegurgur`,
+    title: `Carlos Fegurgur | Web Developer | Chicago, IL`,
     menuLinks:[
       {
         name:'home',
@@ -19,7 +19,7 @@ module.exports = {
         link:'/blog'
       }
     ],
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Personal website of Carlos Fegurgur. A showcase of projects, thoughts and ideas. As well as an insight in to the man behind the screen.`,
     author: `@carlosaqf`,
   },
   plugins: [
