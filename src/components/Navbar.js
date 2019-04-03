@@ -135,7 +135,7 @@ const Navbar = ({ menuLinks }) => {
         {/* BLOG */}
         <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li>
         {/* CONNECT */}
-        <li><MenuLink to="/contact" left="0.8">Connect</MenuLink></li>
+        <li><MenuLink to="/" left="0.8">Connect</MenuLink></li>
       </NavbarLinks>
 
     </ NavbarContainer>
