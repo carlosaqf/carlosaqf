@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from './devices'
+import { Button as BioButton } from './button'
 
 const BioWrapper = styled.div`
     margin: 0 auto;
@@ -27,8 +28,7 @@ const BioWrapper = styled.div`
 const AboutWrapper = styled.div`
     display: flex;
     justify-content: center;
-    max-width: 90vw;
-
+    max-width: 88.6vw;
     padding: 1.3em 0 0 0;
     img{
         max-height: 400px;
@@ -39,15 +39,15 @@ const AboutWrapper = styled.div`
         flex-direction: column;
         align-items: center;
         img{
-            padding-right: 0;
+            // padding-right: 0;
         }
     }
     @media ${device.tablet}{
         flex-direction: row;
     }
 
-    @media ${device.laptopL}{
-        max-width: 54vw;
+    @media ${device.laptop}{
+        flex-direction: row;
     }
 
 `;
@@ -69,7 +69,7 @@ const BioInfo = styled.div`
         max-width: 90vw;
     }
 
-    @media (max-width: 768px){
+    @media ${device.mobileS}{
         h3{
             text-align: center;
         }
@@ -77,33 +77,41 @@ const BioInfo = styled.div`
             align-self: center;
         }
     }
+
+    @media ${device.mobileL}{
+
+    }
+
+    @media ${device.tablet}{
+
+    }
+
+    @media ${device.laptop}{
+        align-self: start;
+        padding-top: 0;
+        h3{
+            text-align: left;
+        }
+        a{
+            align-self: flex-end;
+        }
+    }
 `;
 
-const BioButton = styled.button`
-    background: transparent;
-    border-radius: 3px;
-    border: 2px solid #c8a415;
-    color: white;
-    margin: 0 1em;
-    padding: 0.25em 1em;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-    ${props => props.primary && css`
-        background: #c8a415;
-        color: #white;
-    `}
-`;
 
 
 const Bio = () => (
     <BioWrapper id="bio">
         <h2>ABOUT ME</h2>
         <AboutWrapper>
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" alt="Professional Carlos"/>
+            <img src="https://lh3.googleusercontent.com/sUdA70dubPlc8CoLYEgvl6Nch5g2XPcGBfiUcVJUGXIiP_ZcY5Esj6w3RzyVg3l04reGyjSTxib4mOTEov9tmI6V3g8fvceyVVzcWnUbrk-j97MNIOYxmuUdS-QBpA3JBpQdRABlYTBJrFEj7skkJePcAO1I1qNvi69nRH5JuLlrr8FI2PZmvinDbs7NJ0Aj7IPyjD8sHgPadAoxtFVq7-Dtr72R3XK6EOea7L9KW-DVnjgWBInueaAK1t9m62T_OEBmKQTvw-xRZiyTIxG66JobYvWSWYn5sAfnvftI43U4cxBeCb7DzaicTPWVo2LmESK3OfZHMRAaPivOgEGhMYCsmIzfjKkd7vZaRnBDUJdjJIqUHA5FrQxiFOR2S4egwuwH0ffntR-PguX4SSYQm0SENBMDSTtX4ak5h30nPTlSGLUwX6F-GeBUD_Qd5ez_5wHpBGnHwFsqwkOSfx7b9fqs1Inr_pX-CGTvGS5-oULs2B9no1C5Hyoz3Yel6oOrU-vsoVJRctezjPXHmPgMrhEKjFVplCtQFqWeaLLk1j_4xT_E92EgfSjDdh8YXlVx9SjLq3ZpIp5zrUcNNpfBl_iRYV2L7lhz7h2I=s1332-w1000-h1332-no" alt="Professional Carlos"/>
             <BioInfo>
-                <h3>CATCHY HEADLINE</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed cupiditate harum veniam eaque? Perspiciatis dolorum adipisci dolor consequuntur temporibus suscipit aliquam eligendi voluptatem vero amet. Quisquam quae exercitationem, tempora, laudantium provident culpa totam qui odit dicta recusandae autem ullam consequuntur quasi dolorum animi rem fuga, atque ipsa! Iure, odio animi...</p>
+                <h3>From the Pacific Ocean to the Great Lakes</h3>
+                <p>Hafa Adai! My name is Carlos Fegurgur. 
+                    I am a 24 year old Front End Web Developer from the island of Guam.
+                    A recent transplant to the city of Chicago looking to get his start in the tech industry.
+                    My passion for tech lies in problem solving and how we can use ideas and technology to help others. 
+                </p>
                 <Link to="/about">
                     <BioButton primary>
                         Read More
