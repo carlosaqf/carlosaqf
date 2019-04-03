@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device }  from './devices'
+import { Button } from './button'
 
 const ProjectsContainer = styled.div`
     display: flex;
@@ -61,8 +62,16 @@ const Card = styled.div`
 `;
 
 const CardInfo = styled.div`
+    color: white;
     text-align: left;
+    h3{
+        margin-bottom: 0.5em;
+    }
+`;
 
+const CardButton = styled(Button)`
+    margin: 0 auto 1em auto;
+    margin-left: ${props => props.left || 0}em;
 `;
 
 const WorkButton = styled.button`
@@ -91,6 +100,10 @@ const Projects = () => (
                 <CardInfo>
                     <h3>Project 1</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
+                    <CardButton primary>Visit Demo</CardButton>
+                    <a href="https://www.github.com/carlosaqf/notes" target="_blank">
+                        <CardButton left="1">View Code</CardButton>
+                    </a>
                 </CardInfo>
             
             </Card>
@@ -99,6 +112,10 @@ const Projects = () => (
                 <CardInfo>
                     <h3>Project 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
+                    <CardButton primary>Visit Demo</CardButton>
+                    <a href="https://www.github.com/carlosaqf/carlosaqf" target="_blank">
+                        <CardButton left="1">View Code</CardButton>
+                    </a>
                 </CardInfo>
             </Card>
 
@@ -107,6 +124,10 @@ const Projects = () => (
                 <CardInfo>
                     <h3>Project 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
+                    <CardButton primary>Visit Demo</CardButton>
+                    <a href="https://www.github.com/carlosaqf/freeCodeCampProjects" target="_blank">
+                        <CardButton left="1">View Code</CardButton>
+                    </a>
                 </CardInfo>
             </Card>
         </CardsContainer>
