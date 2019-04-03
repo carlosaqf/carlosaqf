@@ -31,12 +31,9 @@ const ConnectContainer = styled.div`
 const FormContainer = styled.div`
     margin: 0 auto;
     background: #fafafa;
-    // width: 75vw;
     padding: 1em;
     border-radius: 10px;
-    @media ${device.mobileS}{
-        width: 100vw;
-    }
+    width: 100vw;
 
 `;
 
@@ -65,6 +62,10 @@ const Form = styled.div`
     @media ${device.mobileS}{
         width: 80vw;
     }
+
+    @media ${device.laptop}{
+        width: 50vw;
+    }
 `;
 
 const ConnectButton = styled.button`
@@ -83,6 +84,10 @@ const ConnectButton = styled.button`
     color: #white;
     @media ${device.mobileS}{
         width: 50vw;
+    }
+
+    @media ${device.laptop}{
+        width: 20vw;
     }
     
 `;
