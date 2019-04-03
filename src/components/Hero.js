@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from './devices'
+import { Button } from './button'
 
 
 // CONTAINER
@@ -111,22 +112,7 @@ const ButtonContainer = styled.div`
 `;
 
 // BUTTONS 
-const HeroButton = styled.button`
-    background: transparent;
-    border-radius: 3px;
-    border: 2px solid #c8a415;
-    color: white;
-    margin: 0 1em;
-    padding: 0.25em 1em;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-    ${props => props.primary && css`
-        background: #c8a415;
-        color: #white;
-    `}
-`;
-
+const HeroButton = styled(Button)``;
 
 const Hero = () => (
     <HeroContainer>
