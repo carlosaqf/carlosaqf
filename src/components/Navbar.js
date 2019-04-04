@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "gatsby"
-import logo from "../../public/icons/icon-48x48.png"
 import styled from "styled-components"
 import { device } from './devices'
 
@@ -115,6 +114,11 @@ const MenuLink = styled(Link)`
   padding-left: ${props => props.left || 0}em;
 `;
 
+const ConnectLink = styled.a`
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+`;
+
 const Navbar = ({ menuLinks }) => {
   return(
     <NavbarContainer>  
@@ -135,7 +139,7 @@ const Navbar = ({ menuLinks }) => {
         {/* BLOG */}
         <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li>
         {/* CONNECT */}
-        <li><MenuLink to="/" left="0.8">Connect</MenuLink></li>
+        <li><ConnectLink style={{paddingRight: `0.8em`}} href="https://carlosaqf.netlify.com/#connect">Connect</ConnectLink></li>
       </NavbarLinks>
 
     </ NavbarContainer>
