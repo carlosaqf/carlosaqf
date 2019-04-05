@@ -79,11 +79,17 @@ const BioInfo = styled.div`
     }
 
     @media ${device.mobileL}{
-
+        // align-self: start;
     }
 
     @media ${device.tablet}{
-
+        align-self: start;
+        h3{
+            text-align: left;
+        }
+        a{
+            align-self: flex-end;
+        }
     }
 
     @media ${device.laptop}{
