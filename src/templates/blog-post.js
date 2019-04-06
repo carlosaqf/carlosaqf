@@ -8,8 +8,33 @@ const BlogDiv = styled.div`
     width: 70vw;
     margin: 0 auto;
     padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 `;
 
+const BlogImg = styled.img`
+  width: 70vw;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+  margin: 1em auto 0 auto;
+`;
+
+const ImgCaption = styled.figcaption`
+    font-size: 0.5em;
+    font-family: Arial;
+    letter-spacing: 0.08em;
+    float: right;
+`;
+
+const BlogInfo = styled.p`
+    font-size: 0.8em;
+    letter-spacing: 0.08em;
+    margin-top: 0;
+    padding-top: 0;
+`;
 
 export default ({ data }) => {
     const post = data.markdownRemark
@@ -17,7 +42,11 @@ export default ({ data }) => {
         <Layout>
             <BlogDiv>
                 <h1>{post.frontmatter.title}</h1>
-                <img src={post.frontmatter.image} />
+                <figure>
+                    <BlogImg src={post.frontmatter.image}></BlogImg>
+                    <ImgCaption>Image courtesy of <a href="https://unsplash.com">Unsplash</a></ImgCaption>
+                </figure>
+                <BlogInfo>{post.frontmatter.author} - {post.frontmatter.date}</BlogInfo>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </BlogDiv>
         </Layout>
@@ -31,6 +60,8 @@ export const query = graphql`
             frontmatter {
                 title
                 image
+                date(formatString: "DD MMMM, YY")
+                author
             }
         }
     }
