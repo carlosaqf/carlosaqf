@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,7 +22,8 @@ const BlogWrapper = styled.div`
 `;
 
 
-const Blog = () => (
+const Blog = ({ data }) => {
+  return (
   <Layout>
     <SEO title="Blog" />
       <BlogWrapper>
@@ -30,8 +31,44 @@ const Blog = () => (
         <p>Welcome to the Blog Page. Here I will explain who I am and what
           it is I hope to accomplish with this blog. Get to know me!
         </p>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link
+              to={node.fields.slug}
+              style={{
+                textDecoration: `none`,
+                color: `inherit`,
+              }} >
+              <h3>{node.frontmatter.title} - {node.frontmatter.date}</h3>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
       </BlogWrapper>
   </Layout>
-)
+  )
+}
 
 export default Blog
+
+export const query = graphql`
+  query{
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
