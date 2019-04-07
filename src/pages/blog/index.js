@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import { device } from "../../components/devices"
 
 const BlogWrapper = styled.div`
   display: flex;
@@ -18,6 +19,23 @@ const BlogWrapper = styled.div`
       padding-top: 1em;
       text-align: center;
       text-transform: uppercase;
+  }
+`;
+
+const BlogPost = styled.div`
+  margin: 1em 2em;
+  text-align: center;
+  background: #c7c7c7;
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 60vw;
+
+  @media ${device.mobileS}{
+    width: 90vw;
+  }
+
+  @media ${device.laptop}{
+    width: 75vw;
   }
 `;
 
@@ -41,14 +59,7 @@ const Blog = ({ data }) => {
         </p>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id} style={{
-            margin: `1em 2em`,
-            textAlign: `center`,
-            background: `#c7c7c7`,
-            padding: `1em`,
-            borderRadius: `0.5em`,
-            width: `60vw`
-          }}>
+          <BlogPost key={node.id}>
             <Link
               to={node.fields.slug}
               style={{
@@ -62,7 +73,7 @@ const Blog = ({ data }) => {
               }}>{node.frontmatter.title} - {node.frontmatter.date}</h3>
               <p>{node.excerpt}</p>
             </Link>
-          </div>
+          </BlogPost>
         ))}
       </BlogWrapper>
   </Layout>
