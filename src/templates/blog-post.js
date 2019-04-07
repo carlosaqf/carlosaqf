@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 import styled from 'styled-components';
+import { device } from '../components/devices'
 
 
 const BlogDiv = styled.div`
@@ -12,6 +13,14 @@ const BlogDiv = styled.div`
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    @media ${device.mobileS}{
+        width: 90vw;
+    }
+
+    @media ${device.laptop}{
+        width: 75vw;
+    }
 `;
 
 const BlogImg = styled.img`
