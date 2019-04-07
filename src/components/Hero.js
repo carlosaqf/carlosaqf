@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from './devices'
 import { Button } from './button'
-
+import { color } from './colors'
 
 // CONTAINER
 const HeroContainer = styled.div`
@@ -72,7 +72,7 @@ const HeroContainer = styled.div`
             text-transform: uppercase;
             font-size: 6em;
             margin-bottom: 0.1em;
-            color: #c8a415;
+            color: ${color.DARK};
         }
         
         h2{
