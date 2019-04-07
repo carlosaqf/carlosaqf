@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
+import { color } from './colors'
 
 export const Button = styled.button`
     background: transparent;
     border-radius: 3px;
-    border: 2px solid #c8a415;
+    border: 2px solid ${color.DARK};
     color: white;
     margin: 0 1em;
     padding: 0.25em 1em;
@@ -11,7 +12,7 @@ export const Button = styled.button`
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     ${props => props.primary && css`
-        background: #c8a415;
+        background: ${color.DARK};
         color: #white;
     `}
 `;
