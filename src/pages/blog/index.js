@@ -26,7 +26,6 @@ const BlogPost = styled.div`
   margin: 1em 2em;
   text-align: center;
   background: #c7c7c7;
-  padding: 1em;
   border-radius: 0.5em;
   width: 60vw;
 
@@ -35,16 +34,16 @@ const BlogPost = styled.div`
   }
 
   @media ${device.laptop}{
-    width: 75vw;
+    width: 45vw;
   }
 `;
 
 const BlogImg = styled.img`
-  width: 60vw;
+  width: 100vw;
   height: 40vh;
-  background-position: center;
-  background-size: cover;
   margin: 0 auto;
+  padding: 0;
+  border-radius: 0.5em 0.5em 0 0;
 `;
 
 
@@ -70,6 +69,7 @@ const Blog = ({ data }) => {
               <h3 style={{
                 textAlign: `left`,
                 paddingTop: `0.5em`,
+                paddingLeft: `0.5em`,
               }}>{node.frontmatter.title} - {node.frontmatter.date}</h3>
               <p>{node.excerpt}</p>
             </Link>
