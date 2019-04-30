@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { color } from '../components/colors'
 import { device } from './devices'
 import  {Github}  from 'styled-icons/boxicons-logos/Github'
 import {Linkedin} from 'styled-icons/boxicons-logos/Linkedin'
@@ -11,24 +11,38 @@ const TwitterLogo = styled(Twitter)`
     height: 3em;
     width: 3em;
     margin: 10px 3em;
+    :hover{
+        color: ${color.PRIMARY};
+    }
+    
 `;
 
 const CodepenLogo = styled(Codepen)`
     height: 3em;
     width: 3em;
     margin: 10px 3em;
+    :hover{
+        color: ${color.PRIMARY};
+    }
 `;
 
 const LinkedinLogo = styled(Linkedin)`
     height: 3em;
     width: 3em;
     margin: 10px 3em;
+    :hover{
+        color: ${color.PRIMARY};
+    }
 `;
 
 const GithubLogo = styled(Github)`
     height: 3em;
     width: 3em;
     margin: 10px 3em;
+    font-size: 1em;
+    :hover{
+        color: ${color.PRIMARY};
+    }
 `;
 
 
