@@ -5,8 +5,6 @@ date: '2019-04-20'
 image: 'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80'
 author: Carlos Fegurgur
 ---
- # Refactor your life - Routine Basics
-
 Refactoring is the process in programming by which you improve upon your already existing code. Over the next couple of weeks, I will be exploring ways in which you could begin to apply this coding practice to your personal life, improving upon that which may already exist. 
 
 This first week I take a look at the basics of building/maintaining a routine. Whether you realize it or not, each one of us has a routine and our lives are built around them. They can range anywhere from sleeping in until noon and playing video games until its time for bed again to waking up before 6 and hitting the gym or going on a morning run before work. Routines, good or bad, affect our daily lives, which is more than enough reason to take a closer look at refactoring yours.
