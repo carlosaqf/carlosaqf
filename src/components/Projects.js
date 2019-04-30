@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device }  from './devices'
 import { Button } from './button'
+import Card from './Card'
 
 const ProjectsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fafafa;
     padding-bottom: 10px;
     margin: 0 auto;
     h2{
@@ -34,31 +34,6 @@ const CardsContainer = styled.div`
     @media (max-width: 768px){
         flex-direction: column;
     }
-`;
-
-const Card = styled.div`
-    text-align: center;
-    background: url("https://source.unsplash.com/random/400x400");
-    background-size: cover;
-    background-position: center;
-    margin: 0.5em;
-    height: 400px;
-    padding: 0.8em 0.8em 0 0.8em;
-    display: flex;
-    align-items: flex-end;
-
-    ${props => props.project2 && css`
-        background: url("https://source.unsplash.com/random/401x400");
-        background-size: cover;
-        background-position: center;
-    `}
-
-    ${props => props.project3 && css`
-        background: url("https://source.unsplash.com/random/402x400");
-        background-size: cover;
-        background-position: center;
-    `}
-    
 `;
 
 const CardInfo = styled.div`
