@@ -2,26 +2,28 @@ import React from 'react'
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from './devices'
+import { color } from './colors'
 
 // NAVBAR CONTAINER
 const NavbarContainer = styled.div`
-  width: 100vw;
-  height: 7vh;
-  margin: 0 auto;
-  display: grid;
-  background: blue;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-  "logo logo . links"
-  ;
-  padding: 0.5em 0.8em 0 0.8em;
-  align-content: center;
+width: 100vw;
+height: 7.5vh;
+margin: 0 auto;
+display: grid;
+background: ${color.BLUE};
+grid-template-columns: repeat(4, 1fr);
+grid-template-areas:
+"logo logo . links"
+;
+padding: 0.5em 1.8em 0em 1.8em;
+align-content: center;
+position: fixed;
+top: 0;
   
   @media ${device.mobileS}{
     grid-template-areas:
     "logo links";
     grid-template-columns: 1fr 1fr;
-    padding-right: 0;
   }
   
   
@@ -48,7 +50,7 @@ const NavbarLogo = styled.h1`
   }
 
   a{
-    color: #c8a415;
+    color: ${color.PRIMARY};
     text-decoration: none;
   }
 `;
@@ -84,9 +86,10 @@ const NavbarLinks = styled.ul`
   font-family: Helvetica;
   grid-area: links;
   font-size: 1em;
+
   a{
     text-decoration: none;
-    color: #616161;
+    color: ${color.PRIMARY};
   }
   @media ${device.mobileS}{
     font-size: 0.8em;
@@ -100,7 +103,6 @@ const NavbarLinks = styled.ul`
       padding: 1em;
     }
   }
-
 
 `;
 
@@ -137,7 +139,7 @@ const Navbar = ({ menuLinks }) => {
         {/* WORK */}
         <li><MenuLink to={menuLinks[2].link} right="0.8" left="0.8">{menuLinks[2].name}</MenuLink></li>
         {/* BLOG */}
-        <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li>
+        {/* <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li> */}
         {/* CONNECT */}
         <li><ConnectLink style={{paddingRight: `0.8em`}} href="https://carlosaqf.netlify.com/#connect">Connect</ConnectLink></li>
       </NavbarLinks>
