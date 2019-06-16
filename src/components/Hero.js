@@ -11,7 +11,7 @@ const HeroContainer = styled.div`
     background-position: center;
     background-size: cover;
     
-    height: 93vh;
+    height: 100vh;
     width: 100vw;
     margin: 0 auto;
     
