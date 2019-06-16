@@ -9,7 +9,7 @@ const NavbarContainer = styled.div`
   height: 7vh;
   margin: 0 auto;
   display: grid;
-  background: white;
+  background: blue;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "logo logo . links"
