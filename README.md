@@ -1,4 +1,4 @@
-<h1>View site live <a href="carlosaqf.netlify.com" target="_blank">here</a></h1>
+<h1>View site live <a href="https://carlosaqf.netlify.com/" target="_blank">here</a></h1>
 
 
 <i>Get started with a Gatsby site by following instructions below:</i>
