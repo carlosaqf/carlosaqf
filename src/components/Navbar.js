@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from './devices'
 import { color } from './colors'
 
+import { Burger, Menu } from '../components'
+
 // NAVBAR CONTAINER
 const NavbarContainer = styled.div`
 width: 100vw;
-height: 7.5vh;
+height: 7.0vh;
 margin: 0 auto;
 display: grid;
-background: ${color.BLUE};
+background: ${color.GRAY};
 grid-template-columns: repeat(4, 1fr);
 grid-template-areas:
 "logo logo . links"
@@ -20,11 +22,19 @@ align-content: center;
 position: fixed;
 top: 0;
   
-  @media ${device.mobileS}{
-    grid-template-areas:
-    "logo links";
-    grid-template-columns: 1fr 1fr;
-  }
+@media ${device.mobileS}{
+  grid-template-areas:
+  "logo links";
+  grid-template-columns: 1fr 1fr;
+  height: 3.5em;
+}
+
+@media ${device.tablet}{
+  grid-template-areas: "logo links";
+  height: 3.5em;
+}
+
+  
   
   
 `;
@@ -89,10 +99,11 @@ const NavbarLinks = styled.ul`
 
   a{
     text-decoration: none;
-    color: ${color.PRIMARY};
+    color: ${color.WHITE};
   }
+
   @media ${device.mobileS}{
-    font-size: 0.8em;
+    font-size: 1em;
     a{
       padding: 0.4em;
     }
@@ -101,6 +112,7 @@ const NavbarLinks = styled.ul`
   @media ${device.tablet}{
     a{
       padding: 1em;
+      
     }
   }
 
@@ -122,10 +134,16 @@ const ConnectLink = styled.a`
 `;
 
 const Navbar = ({ menuLinks }) => {
+  
+  const [open, setOpen] = useState(false)
+  const menuId = "main-menu"
+  
   return(
     <NavbarContainer>  
         
       {/* LOGO */}
+      <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+      <Menu open={open} setOpen={setOpen} id={menuId} />
       <NavbarLogo>
         <MenuName to="/">
           C

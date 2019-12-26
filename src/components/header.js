@@ -1,11 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 import Navbar from "./Navbar"
+import { color } from "./colors"
 
 const HeaderWrapper = styled.div`
-  background: #ffff81;
+  background: ${color.PRIMARY};
   margin-bottom: 1.45rem;
   h1 {
     img {
@@ -23,7 +24,7 @@ const HeaderContainer = styled.div`
   ";
   justify-content: space-between;
   max-width: 1440px;
-  background: #ffff81;
+  background: ${color.PRIMARY};
   align-items: center;
 `;
 
