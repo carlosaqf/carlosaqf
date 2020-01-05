@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyledMenu } from './Menu.styled'
 
+
 const Menu = ({ open, ...props }) => {
 
     const isHidden = open ? true : false
