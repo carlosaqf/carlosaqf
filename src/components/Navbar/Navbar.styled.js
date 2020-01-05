@@ -9,7 +9,7 @@ const NavbarContainer = styled.div`
     height: 7.0vh;
     margin: 0 auto;
     display: grid;
-    background: ${color.GRAY};
+    background: transparent;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
     "logo logo . links"
@@ -104,7 +104,6 @@ const NavbarLinks = styled.ul`
   @media ${device.tablet}{
     a{
       padding: 1em;
-      
     }
   }
 
