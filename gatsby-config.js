@@ -17,6 +17,10 @@ module.exports = {
       {
         name:'blog',
         link:'/blog'
+      },
+      {
+        name:'connect',
+        link:'/#connect'
       }
     ],
     description: `Personal website of Carlos Fegurgur. A showcase of projects, thoughts and ideas. As well as an insight in to the man behind the screen.`,
