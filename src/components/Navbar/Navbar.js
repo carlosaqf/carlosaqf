@@ -8,6 +8,7 @@ import {
     ConnectLink 
 } from './Navbar.styled'
 import { Burger, Menu } from '../../components'
+import Link from '../../components/Links'
 
 const Navbar = ({ menuLinks }) => {
   
@@ -28,14 +29,19 @@ const Navbar = ({ menuLinks }) => {
   
         {/* LINKS */}
         <NavbarLinks>
+
           {/* ABOUT */}
-          <li><MenuLink to={menuLinks[1].link} right="0.8">{menuLinks[1].name}</MenuLink></li>
+          <Link page={menuLinks[1].link} text={menuLinks[1].name} />
+
           {/* WORK */}
-          <li><MenuLink to={menuLinks[2].link} right="0.8" left="0.8">{menuLinks[2].name}</MenuLink></li>
+          <Link page={menuLinks[2].link} text={menuLinks[2].name} />
+          
           {/* BLOG */}
-          {/* <li><MenuLink to={menuLinks[3].link} right="0.8" left="0.8">{menuLinks[3].name}</MenuLink></li> */}
+          {/* <li><MenuLink to={menuLinks[3].link} righ
+          
           {/* CONNECT */}
-          <li><ConnectLink style={{paddingRight: `0.8em`}} href="https://carlosaqf.netlify.com/#connect">Connect</ConnectLink></li>
+          <Link page={menuLinks[4].link} text={menuLinks[4].name} />
+
         </NavbarLinks>
   
       </ NavbarContainer>
@@ -43,4 +49,4 @@ const Navbar = ({ menuLinks }) => {
   }
   
   
-  export default Navbar
+export default Navbar
