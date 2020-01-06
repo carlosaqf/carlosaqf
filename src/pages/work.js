@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import styled, { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { Button } from '../components/button'
+// import { Button } from '../components/button'
+import Button from '../components/Buttons'
 import { device } from '../components/devices'
 
 const WorkWrapper = styled.div`
@@ -94,10 +95,18 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
+              {/* <CardButton primary>Visit Demo</CardButton>
               <a href="https://www.github.com/carlosaqf/notes" target="_blank">
                   <CardButton left="1">View Code</CardButton>
-              </a>
+              </a> */}
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -105,10 +114,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -116,10 +129,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -127,10 +144,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -138,10 +159,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -149,10 +174,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -160,10 +189,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -171,10 +204,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 
@@ -182,10 +219,14 @@ const Work = () => (
           <CardInfo>
               <h3>Project 1</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a>
+              <Button
+                text='Visit Demo'
+                primary
+              />
+              <Button
+                text='View Code'
+                to='https://www.github.com/carlosaqf/notes'
+              />
           </CardInfo>
         </Card>
 

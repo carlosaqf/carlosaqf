@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from './devices'
-import { Button as BioButton } from './button'
+import Button from '../components/Buttons'
 
 const BioWrapper = styled.div`
     margin: 0 auto;
@@ -121,9 +121,10 @@ const Bio = () => (
                 more about me, what I have done and what I could potentially do for you below!
                 </p>
                 <Link to="/about">
-                    <BioButton primary>
-                        Read More
-                    </BioButton>
+                    <Button 
+                        text='Read More'
+                        primary
+                    />
                 </Link>
             </BioInfo>
         </AboutWrapper>

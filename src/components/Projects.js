@@ -2,8 +2,11 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device }  from './devices'
-import { Button } from './button'
+// import { Button } from './button'
+import Button from '../components/Buttons'
 import Card from './Card'
+import  Cards from '../components/Card'
+import { color } from './colors'
 
 const ProjectsContainer = styled.div`
     display: flex;
@@ -34,6 +37,7 @@ const CardsContainer = styled.div`
     @media (max-width: 768px){
         flex-direction: column;
     }
+
 `;
 
 const CardInfo = styled.div`
@@ -42,6 +46,7 @@ const CardInfo = styled.div`
     h3{
         margin-bottom: 0.5em;
     }
+    box-shadow: ${color.SHADOW}
 `;
 
 const CardButton = styled(Button)`
@@ -71,26 +76,43 @@ const Projects = () => (
         <h2>PROJECTS</h2>
         <CardsContainer>
             {/* PROJECT 1 */}
-            <Card>
+
+            <Cards
+                title='Project 0'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+            />
+
+
+
+            {/* <Card>
                 <CardInfo>
                     <h3>Project 1</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-                    <CardButton primary>Visit Demo</CardButton>
-                    <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                        <CardButton left="1">View Code</CardButton>
-                    </a>
+                    <Button
+                        text='Visit Demo'
+                        primary
+                    />
+                    <Button
+                        text='View Code'
+                        to='https://www.github.com/carlosaqf/notes'
+                    />
                 </CardInfo>
             
-            </Card>
+            </Card> */}
+
             {/* PROJECT 2 */}
             <Card project2>
                 <CardInfo>
                     <h3>Project 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-                    <CardButton primary>Visit Demo</CardButton>
-                    <a href="https://www.github.com/carlosaqf/carlosaqf" target="_blank">
-                        <CardButton left="1">View Code</CardButton>
-                    </a>
+                    <Button
+                        text='Visit Demo'
+                        primary
+                    />
+                    <Button
+                        text='View Code'
+                        to='https://www.github.com/carlosaqf/notes'
+                    />
                 </CardInfo>
             </Card>
 
@@ -99,17 +121,22 @@ const Projects = () => (
                 <CardInfo>
                     <h3>Project 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-                    <CardButton primary>Visit Demo</CardButton>
-                    <a href="https://www.github.com/carlosaqf/freeCodeCampProjects" target="_blank">
-                        <CardButton left="1">View Code</CardButton>
-                    </a>
+                    <Button
+                        text='Visit Demo'
+                        primary
+                    />
+                    <Button
+                        text='View Code'
+                        to='https://www.github.com/carlosaqf/notes'
+                    />
                 </CardInfo>
             </Card>
         </CardsContainer>
         <Link to="/work">
-            <WorkButton primary>
-                See my Work
-            </WorkButton>
+            <Button
+                text='See my Work'
+                primary
+            />
         </Link>
     </ProjectsContainer>
 )

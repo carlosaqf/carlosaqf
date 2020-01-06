@@ -3,9 +3,7 @@ import {
     NavbarContainer,
     NavbarLogo,
     MenuName,
-    NavbarLinks,
-    MenuLink,
-    ConnectLink 
+    NavbarLinks, 
 } from './Navbar.styled'
 import { Burger, Menu } from '../../components'
 import Link from '../../components/Links'
@@ -31,16 +29,28 @@ const Navbar = ({ menuLinks }) => {
         <NavbarLinks>
 
           {/* ABOUT */}
-          <Link page={menuLinks[1].link} text={menuLinks[1].name} />
+          <Link
+            page={menuLinks[1].link} 
+            text={menuLinks[1].name} 
+          />
 
           {/* WORK */}
-          <Link page={menuLinks[2].link} text={menuLinks[2].name} />
+          <Link 
+            page={menuLinks[2].link} 
+            text={menuLinks[2].name} 
+          />
           
           {/* BLOG */}
-          {/* <li><MenuLink to={menuLinks[3].link} righ
+          <Link 
+            page={menuLinks[3].link}
+            text={menuLinks[3].name}
+          />
           
           {/* CONNECT */}
-          <Link page={menuLinks[4].link} text={menuLinks[4].name} />
+          <Link 
+            page={menuLinks[4].link}
+            text={menuLinks[4].name} 
+          />
 
         </NavbarLinks>
   

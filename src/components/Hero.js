@@ -2,8 +2,8 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from './devices'
-import { Button } from './button'
 import { color } from './colors'
+import Button from '../components/Buttons'
 
 // CONTAINER
 const HeroContainer = styled.div`
@@ -111,9 +111,6 @@ const ButtonContainer = styled.div`
     } 
 `;
 
-// BUTTONS 
-const HeroButton = styled(Button)``;
-
 const Hero = () => (
     <HeroContainer>
 
@@ -122,19 +119,16 @@ const Hero = () => (
         <p>Front End Web Developer | Chicago, IL</p>
         
         <ButtonContainer>
-            {/* PRIMARY CTA */}
-            <a href="#bio">
-                <HeroButton primary>
-                    Learn More
-                </HeroButton>
-            </a>
+            <Button 
+                text='Learn More'
+                to='#bio'
+                primary
+            />
 
-            {/* SECONDARY CTA */}
-            <a href="#connect">
-                <HeroButton>
-                    Reach Out
-                </HeroButton>
-            </a>
+            <Button
+                text='Reach Out'
+                to='#connect'
+            />
 
         </ButtonContainer>
 
