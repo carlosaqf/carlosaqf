@@ -19,7 +19,7 @@ module.exports = {
         link:'/blog'
       },
       {
-        name:'connect',
+        name:'contact',
         link:'/#connect'
       }
     ],
