@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Socials from './Socials'
 import { device } from './devices'
-import { Button } from '../components/button'
+import Button from '../components/Buttons'
 import { color } from './colors'
 
 const ConnectContainer = styled.div`
