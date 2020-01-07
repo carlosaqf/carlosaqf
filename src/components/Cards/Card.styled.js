@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { color } from '../colors'
 
 const StyledCard = styled.div`
@@ -10,14 +10,29 @@ const StyledCard = styled.div`
     padding: 0.8em 0.8em 0 0.8em;
     display: flex;
     align-items: flex-end;
+    max-width: 90vw;
+    
+    button{
+        margin-bottom: 0.5em;
+    }
 `
 
 const CardInfo = styled.div`
     color: white;
     text-align: left;
+    
     h3{
         margin-bottom: 0.5em;
     }
+    
+    button{
+        margin-left: 0;
+        box-shadow: none;
+    }
+    
+    ${props => props.project && css`
+        
+    `}
 `
 
 export { 
