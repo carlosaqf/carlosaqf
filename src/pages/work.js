@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 // import { Button } from '../components/button'
 import Button from '../components/Buttons'
 import { device } from '../components/devices'
+import Card from '../components/Cards'
 
 const WorkWrapper = styled.div`
   display: flex;
@@ -43,192 +44,91 @@ const CardsContainer = styled.div`
     }
 `;
 
-const Card = styled.div`
-    text-align: center;
-    background: url("https://source.unsplash.com/random/400x400");
-    background-size: cover;
-    background-position: center;
-    margin: 0.5em;
-    height: 400px;
-    padding: 0.8em 0.8em 0 0.8em;
-    display: flex;
-    align-items: flex-end;
 
-    ${props => props.project2 && css`
-        background: url("https://source.unsplash.com/random/401x400");
-        background-size: cover;
-        background-postion: center;
-    `}
 
-    ${props => props.project3 && css`
-        background: url("https://source.unsplash.com/random/402x400");
-        background-size: cover;
-        background-postion: center;
-    `}
-    
-`;
-
-const CardInfo = styled.div`
-    color: white;
-    text-align: left;
-    h3{
-        margin-bottom: 0.5em;
-    }
-`;
-
-const CardButton = styled(Button)`
-    margin: 0 auto 1em auto;
-    margin-left: ${props => props.left || 0}em;
-`;
 
 
 
 
 const Work = () => (
+
   <Layout>
     <SEO title="Work" />
     <WorkWrapper>
       <h2>Work</h2>
       <CardsContainer>
+          <Card 
+                title='Project 1'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                project 
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+                text2='DEMOOOOO'
+          />
+          <Card 
+                title='Project 2'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 3'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 4'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 5'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 6'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 7'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
+          <Card 
+                title='Project 8'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+          />
         
-        <Card>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              {/* <CardButton primary>Visit Demo</CardButton>
-              <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                  <CardButton left="1">View Code</CardButton>
-              </a> */}
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
+          {/* OLD CARD
+          <Cards>
+            <CardInfo>
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
+                {/* <CardButton primary>Visit Demo</CardButton>
+                <a href="https://www.github.com/carlosaqf/notes" target="_blank">
+                    <CardButton left="1">View Code</CardButton>
+                </a> */}
+                {/* <Button
+                  text='Visit Demo'
+                  primary
+                />
+                <Button
+                  text='View Code'
+                  to='https://www.github.com/carlosaqf/notes'
+                />
+            </CardInfo>
+          </Cards> */} 
 
-        <Card project2>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card project3>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card project2>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card project3>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card project2>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
-
-        <Card project3>
-          <CardInfo>
-              <h3>Project 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-              <Button
-                text='Visit Demo'
-                primary
-              />
-              <Button
-                text='View Code'
-                to='https://www.github.com/carlosaqf/notes'
-              />
-          </CardInfo>
-        </Card>
+        
 
       </CardsContainer>
     </WorkWrapper>
