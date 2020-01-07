@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 import { device }  from './devices'
 // import { Button } from './button'
 import Button from '../components/Buttons'
-import Card from './Card'
-import  Cards from '../components/Card'
+// import Card from './Card'
+import  Card from '../components/Cards'
 import { color } from './colors'
 
 const ProjectsContainer = styled.div`
@@ -37,51 +37,41 @@ const CardsContainer = styled.div`
     @media (max-width: 768px){
         flex-direction: column;
     }
-
 `;
-
-const CardInfo = styled.div`
-    color: white;
-    text-align: left;
-    h3{
-        margin-bottom: 0.5em;
-    }
-    box-shadow: ${color.SHADOW}
-`;
-
-const CardButton = styled(Button)`
-    margin: 0 auto 1em auto;
-    margin-left: ${props => props.left || 0}em;
-`;
-
-const WorkButton = styled(Button)`
-    background: transparent;
-    border-radius: 3px;
-    border: 2px solid #c8a415;
-    color: white;
-    margin: 1em 1em;
-    padding: 0.25em 1em;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-    ${props => props.primary && css`
-        background: #c8a415;
-        color: #white;
-    `}
-`;
-
 
 const Projects = () => (
     <ProjectsContainer>
         <h2>PROJECTS</h2>
+        
+
         <CardsContainer>
             {/* PROJECT 1 */}
 
-            <Cards
-                title='Project 0'
+            <Card 
+                project
+                title='Project 1'
                 desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                text2='Source'
+                to='https://www.github.com/carlosaqf/notes'
             />
 
+            <Card
+                title='Project 2'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+            />
+
+            <Card
+                title='Project 3'
+                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+                text='Visit Demo'
+                to='https://www.github.com/carlosaqf/notes'
+            />
+                
+           
+            
 
 
             {/* <Card>
@@ -101,7 +91,7 @@ const Projects = () => (
             </Card> */}
 
             {/* PROJECT 2 */}
-            <Card project2>
+            {/* <Card project2>
                 <CardInfo>
                     <h3>Project 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
@@ -114,10 +104,10 @@ const Projects = () => (
                         to='https://www.github.com/carlosaqf/notes'
                     />
                 </CardInfo>
-            </Card>
+            </Card> */}
 
             {/* PROJECT 3 */}
-            <Card project3>
+            {/* <Card>
                 <CardInfo>
                     <h3>Project 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
@@ -130,7 +120,9 @@ const Projects = () => (
                         to='https://www.github.com/carlosaqf/notes'
                     />
                 </CardInfo>
-            </Card>
+            </Card> */}
+
+
         </CardsContainer>
         <Link to="/work">
             <Button
