@@ -120,12 +120,13 @@ const Bio = () => (
                 however, you can also catch me going to the gym, playing board games / sports, or looking for the next best cup of coffee. Learn
                 more about me, what I have done and what I could potentially do for you below!
                 </p>
-                <Link to="/about">
-                    <Button 
-                        text='Read More'
-                        primary
-                    />
-                </Link>
+                
+                <Button 
+                    text='Read More'
+                    to='/about'
+                    primary
+                />
+            
             </BioInfo>
         </AboutWrapper>
     </BioWrapper>

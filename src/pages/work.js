@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import styled, { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-// import { Button } from '../components/button'
 import Button from '../components/Buttons'
 import { device } from '../components/devices'
 import Card from '../components/Cards'
@@ -54,16 +53,18 @@ const Work = () => (
 
   <Layout>
     <SEO title="Work" />
+    
     <WorkWrapper>
+
       <h2>Work</h2>
+
       <CardsContainer>
+
           <Card 
                 title='Project 1'
                 desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                project 
                 text='Visit Demo'
                 to='https://www.github.com/carlosaqf/notes'
-                text2='DEMOOOOO'
           />
           <Card 
                 title='Project 2'
@@ -107,28 +108,6 @@ const Work = () => (
                 text='Visit Demo'
                 to='https://www.github.com/carlosaqf/notes'
           />
-        
-          {/* OLD CARD
-          <Cards>
-            <CardInfo>
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.</p>
-                {/* <CardButton primary>Visit Demo</CardButton>
-                <a href="https://www.github.com/carlosaqf/notes" target="_blank">
-                    <CardButton left="1">View Code</CardButton>
-                </a> */}
-                {/* <Button
-                  text='Visit Demo'
-                  primary
-                />
-                <Button
-                  text='View Code'
-                  to='https://www.github.com/carlosaqf/notes'
-                />
-            </CardInfo>
-          </Cards> */} 
-
-        
 
       </CardsContainer>
     </WorkWrapper>
