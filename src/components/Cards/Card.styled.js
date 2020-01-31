@@ -10,7 +10,8 @@ const StyledCard = styled.div`
     padding: 0.8em 0.8em 0 0.8em;
     display: flex;
     align-items: flex-end;
-    
+    /* box-shadow: ${color.SHADOW}; */
+    box-shadow: ${color.SHADOWTWO};
     max-width: 90vw;
     
     button{
