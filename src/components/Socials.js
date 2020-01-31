@@ -6,6 +6,7 @@ import  {Github}  from 'styled-icons/boxicons-logos/Github'
 import {Linkedin} from 'styled-icons/boxicons-logos/Linkedin'
 import {Codepen} from 'styled-icons/boxicons-logos/Codepen'
 import {Twitter} from 'styled-icons/boxicons-logos/Twitter'
+import {Instagram} from 'styled-icons/boxicons-logos/Instagram'
 
 const TwitterLogo = styled(Twitter)`
     height: 3em;
@@ -17,7 +18,7 @@ const TwitterLogo = styled(Twitter)`
     
 `;
 
-const CodepenLogo = styled(Codepen)`
+const InstagramLogo = styled(Instagram)`
     height: 3em;
     width: 3em;
     margin: 10px 3em;
@@ -78,8 +79,8 @@ const Socials = () => (
             <a href="https://www.linkedin.com/in/cfegurgur" target="_blank"><LinkedinLogo /></a>
         </IconContainer>
         <IconContainer>
-            <a href="https://www.codepen.com" target="_blank"><CodepenLogo /></a>
-            <a href="https://www.twitter.com" target="_blank"><TwitterLogo /></a>
+            <a href="https://www.instagram.com/cfegurgur" target="_blank"><InstagramLogo /></a>
+            <a href="https://www.twitter.com/cfegurgur_" target="_blank"><TwitterLogo /></a>
         </IconContainer>
     </SocialContainer>
 
