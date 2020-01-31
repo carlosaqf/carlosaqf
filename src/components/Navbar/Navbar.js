@@ -7,11 +7,13 @@ import {
 } from './Navbar.styled'
 import { Burger, Menu } from '../../components'
 import Link from '../../components/Links'
+import { useSiteMetadata } from '../../hooks/use-site-metadata';
 
-const Navbar = ({ menuLinks }) => {
+const Navbar = () => {
   
     const [open, setOpen] = useState(false)
     const menuId = "main-menu"
+    const { menuLinks } = useSiteMetadata()
     
     return(
       <NavbarContainer>  
@@ -19,6 +21,7 @@ const Navbar = ({ menuLinks }) => {
         {/* LOGO */}
         <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
         <Menu open={open} setOpen={setOpen} id={menuId} />
+
         <NavbarLogo>
           <MenuName to="/">
             C
