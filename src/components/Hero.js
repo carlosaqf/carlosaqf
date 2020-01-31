@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { device } from './devices'
 import { color } from './colors'
 import Button from '../components/Buttons'
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 // CONTAINER
 const HeroContainer = styled.div`
@@ -21,6 +22,9 @@ const HeroContainer = styled.div`
     
     color: white;
     text-align: center;
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%); */
+   
     
     @media ${device.mobileS}{
         h1{
@@ -111,29 +115,33 @@ const ButtonContainer = styled.div`
     } 
 `;
 
-const Hero = () => (
-    <HeroContainer>
+const Hero = () => {
+    
+    return(
+        <HeroContainer>
 
-        <h2>Hafa Adai</h2>
-        <h1>Carlos Fegurgur</h1>
-        <p>Front End Web Developer | Chicago, IL</p>
-        
-        <ButtonContainer>
-            <Button 
-                text='Learn More'
-                to='#bio'
-                primary
-            />
+            <h2>Hafa Adai</h2>
+            <h1>Carlos Fegurgur</h1>
+            <p>Front End Web Developer | Chicago, IL</p>
+            
+            
+            <ButtonContainer>
+                <Button 
+                    text='Learn More'
+                    to='#bio'
+                    primary
+                />
 
-            <Button
-                text='Reach Out'
-                to='#connect'
-            />
+                <Button
+                    text='Reach Out'
+                    to='#connect'
+                />
 
-        </ButtonContainer>
+            </ButtonContainer>
 
-    </HeroContainer>
-)
+        </HeroContainer>
+    )
+}
 
 
 export default Hero
