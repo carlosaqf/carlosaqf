@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { device } from '../devices'
 import { color } from '../colors'
 
-const BioWrapper = styled.div`
+const StyledBio = styled.div`
     margin: 0 auto;
     display: flex;
     background: ${color.WHITE};
@@ -25,31 +25,33 @@ const BioWrapper = styled.div`
     }
 `;
 
-const AboutWrapper = styled.div`
-    display: flex;
+const StyledBioCard = styled.div`
+    display: grid;
     justify-content: center;
-    max-width: 88.6vw;
-    padding: 1.3em 0 0 0;
+    max-width: 75vw;
+    min-height: auto;
+    padding: 1em;
 
+    background-color: #DDD;
+    border-radius: 5px;
+
+    /* grid-template-columns: 1fr 1fr; */
+    
 
     @media ${device.mobileS}{
-        flex-direction: column;
-        align-items: center;
-        img{
-            // padding-right: 0;
-        }
+        grid-template-columns: 1fr;
     }
     @media ${device.tablet}{
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     @media ${device.laptop}{
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
 
 `;
 
-const BioInfo = styled.div`
+const StyledBioCardInfo = styled.div`
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -96,23 +98,29 @@ const BioInfo = styled.div`
             text-align: left;
         }
         a{
-            align-self: center;
+            align-self: flex-end;
         }
     }
 `;
 
-const AboutImg = styled.img`
-        max-height: 500px;
-        max-width: 500px;
-        padding-right: 1.5em;
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-        
-        
+const StyledBioCardImg = styled.img`
+    /* max-height: 500px;
+    max-width: 500px; */
+    /* clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); */
+   
 `;
 
+const StyledBioCardImgContainer = styled.div`
+    display: block;
+    width: 100%;
+    height: auto;
+`
+
 export {
-    BioWrapper,
-    BioInfo,
-    AboutWrapper,
-    AboutImg
+    StyledBio,
+    StyledBioCard,
+    StyledBioCardInfo,
+    StyledBioCardImg,
+    StyledBioCardImgContainer
 }
+
