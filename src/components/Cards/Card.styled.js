@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 import { color } from '../colors'
+import { animated } from 'react-spring'
 
-const StyledCard = styled.div`
+const StyledCard = styled(animated.div)`
     background: url("https://source.unsplash.com/random/400x400");
     background-size: cover;
     background-position: center;
@@ -13,11 +14,19 @@ const StyledCard = styled.div`
     /* box-shadow: ${color.SHADOW}; */
     box-shadow: ${color.SHADOWTWO};
     max-width: 90vw;
-    
+    will-change: transform, opacity;
+
+
     button{
         margin-bottom: 0.5em;
     }
 `
+
+const StyledText = styled(animated.p)`
+    will-change: transform, opacity;
+`
+
+
 
 const CardInfo = styled.div`
     color: white;
@@ -37,7 +46,8 @@ const CardInfo = styled.div`
     `}
 `
 
-export { 
-    StyledCard,
-    CardInfo
+export {
+	StyledCard,
+	CardInfo,
+	StyledText
 }
