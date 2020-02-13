@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { device } from '../devices'
 import { color } from '../colors'
 
@@ -23,7 +23,7 @@ const StyledBio = styled.div`
             text-align: center;
         }
     }
-`;
+`
 
 const StyledBioCard = styled.div`
     display: grid;
@@ -31,9 +31,6 @@ const StyledBioCard = styled.div`
     max-width: 75vw;
     min-height: auto;
     padding: 1em;
-
-    background-color: #DDD;
-    border-radius: 5px;
 
     /* grid-template-columns: 1fr 1fr; */
     
@@ -46,10 +43,10 @@ const StyledBioCard = styled.div`
     }
 
     @media ${device.laptop}{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
-`;
+`
 
 const StyledBioCardInfo = styled.div`
     padding: 10px;
@@ -101,26 +98,26 @@ const StyledBioCardInfo = styled.div`
             align-self: flex-end;
         }
     }
-`;
+`
 
 const StyledBioCardImg = styled.img`
     /* max-height: 500px;
     max-width: 500px; */
     /* clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); */
    
-`;
+`
 
 const StyledBioCardImgContainer = styled.div`
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
 `
 
 export {
-    StyledBio,
-    StyledBioCard,
-    StyledBioCardInfo,
-    StyledBioCardImg,
-    StyledBioCardImgContainer
+	StyledBio,
+	StyledBioCard,
+	StyledBioCardInfo,
+	StyledBioCardImg,
+	StyledBioCardImgContainer
 }
 
