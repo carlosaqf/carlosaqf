@@ -4,20 +4,20 @@ import Link from '../Links'
 import { StaticQuery, graphql } from 'gatsby'
 
 
-
 const Menu = ({ open, menuLinks, ...props }) => {
 
-    const isHidden = open ? true : false
-    const tabIndex = isHidden ? 0 : -1
+	const isHidden = open ? true : false
+	// eslint-disable-next-line no-unused-vars
+	const tabIndex = isHidden ? 0 : -1
 
-    return (
-        <StyledMenu 
-            open={open}
-            aria-hidden={!isHidden}
-            {...props}
-        >
-            <StaticQuery
-                query={graphql`
+	return (
+		<StyledMenu
+			open={open}
+			aria-hidden={!isHidden}
+			{...props}
+		>
+			<StaticQuery
+				query={graphql`
                     query MenuLinksQuery {
                         site {
                             siteMetadata {
@@ -30,33 +30,33 @@ const Menu = ({ open, menuLinks, ...props }) => {
                         }
                     }
                 `}
-                render={data => (
-                    <>
-                        <Link
-                            page={data.site.siteMetadata.menuLinks[1].link} 
-                            text={data.site.siteMetadata.menuLinks[1].name} 
-                        />
-                        <Link
-                            page={data.site.siteMetadata.menuLinks[2].link} 
-                            text={data.site.siteMetadata.menuLinks[2].name} 
-                        />
-                        <Link
-                            page={data.site.siteMetadata.menuLinks[3].link} 
-                            text={data.site.siteMetadata.menuLinks[3].name} 
-                        />
-                        <Link
-                            page={data.site.siteMetadata.menuLinks[4].link} 
-                            text={data.site.siteMetadata.menuLinks[4].name} 
-                        />
-                    </>
-                )}
-            />
-      
-            
+				render={data => (
+					<>
+						<Link
+							page={data.site.siteMetadata.menuLinks[1].link}
+							text={data.site.siteMetadata.menuLinks[1].name}
+						/>
+						<Link
+							page={data.site.siteMetadata.menuLinks[2].link}
+							text={data.site.siteMetadata.menuLinks[2].name}
+						/>
+						<Link
+							page={data.site.siteMetadata.menuLinks[3].link}
+							text={data.site.siteMetadata.menuLinks[3].name}
+						/>
+						<Link
+							page={data.site.siteMetadata.menuLinks[4].link}
+							text={data.site.siteMetadata.menuLinks[4].name}
+						/>
+					</>
+				)}
+			/>
 
 
-        </StyledMenu>
-    )
+
+
+		</StyledMenu>
+	)
 }
 
 export default Menu
@@ -64,15 +64,15 @@ export default Menu
 
 
 // <a href="/"
-            //     tabIndex={tabIndex}
-            // >About</a>
-            // <a href="/"
-            //     tabIndex={tabIndex}
-            // >Work</a>
-            // <a href="/"
-            //     tabIndex={tabIndex}
-            // >Contact</a>
-            // <Link
-            //     page={menuLinks[1].link} 
-            //     text={menuLinks[1].name} 
-            // />
+//     tabIndex={tabIndex}
+// >About</a>
+// <a href="/"
+//     tabIndex={tabIndex}
+// >Work</a>
+// <a href="/"
+//     tabIndex={tabIndex}
+// >Contact</a>
+// <Link
+//     page={menuLinks[1].link}
+//     text={menuLinks[1].name}
+// />

@@ -1,7 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { color } from '../colors'
-import { device } from '../devices'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 const StyledLink = styled(Link)`
     text-transform: uppercase;
@@ -18,7 +17,7 @@ const StyledLink = styled(Link)`
     
 `
 export {
-    StyledLink
+	StyledLink
 }
 
 // const MenuLink = styled(Link)`

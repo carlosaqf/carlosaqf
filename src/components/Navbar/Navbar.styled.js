@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { color } from '../colors'
 import { device } from '../devices'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 // NAVBAR CONTAINER
 const NavbarContainer = styled.div`
@@ -30,7 +30,7 @@ const NavbarContainer = styled.div`
     grid-template-areas: "logo links";
     height: 3.5em;
     }
-`;
+`
 
 // LOGO
 const NavbarLogo = styled.h1`
@@ -56,7 +56,7 @@ const NavbarLogo = styled.h1`
     color: ${color.PRIMARY};
     text-decoration: none;
   }
-`;
+`
 
 const MenuName = styled(Link)`
   
@@ -77,7 +77,7 @@ const MenuName = styled(Link)`
       content: "arlosaqf"
     }
   }
-`;
+`
 
 // LINKS
 const NavbarLinks = styled.ul`
@@ -107,7 +107,7 @@ const NavbarLinks = styled.ul`
     }
   }
 
-`;
+`
 
 // LINK STYLES
 const MenuLink = styled(Link)`
@@ -117,19 +117,19 @@ const MenuLink = styled(Link)`
   padding-right: ${props => props.right || 0}em;
   padding-bottom: ${props => props.bottom || 0}em;
   padding-left: ${props => props.left || 0}em;
-`;
+`
 
 const ConnectLink = styled.a`
   text-transform: uppercase;
   letter-spacing: 1.5px;
-`;
+`
 
 
 export {
-    NavbarContainer,
-    NavbarLogo,
-    MenuName,
-    NavbarLinks,
-    MenuLink,
-    ConnectLink
+	NavbarContainer,
+	NavbarLogo,
+	MenuName,
+	NavbarLinks,
+	MenuLink,
+	ConnectLink
 }
