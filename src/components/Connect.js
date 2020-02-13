@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import Socials from './Socials'
 import { device } from './devices'
-import Button from '../components/Buttons'
 import { color } from './colors'
+
 
 const ConnectContainer = styled.div`
     margin: 0 auto;
@@ -33,18 +32,18 @@ const ConnectContainer = styled.div`
         color: ${color.PRIMARY};
     }
 
-`;
+`
 
 const Connect = () => (
-    <ConnectContainer id="connect">
-        <h2>CONNECT</h2>
-        <Socials />
+	<ConnectContainer id="connect">
+		<h2>CONNECT</h2>
+		<Socials />
 
-        <p>Email me at: <a href="mailto:carlosfegurgur@gmail.com" target="_top">carlosfegurgur@gmail.com</a></p>
+		<p>Email me at: <a href="mailto:carlosfegurgur@gmail.com" target="_top">carlosfegurgur@gmail.com</a></p>
 
-    </ConnectContainer>
-      
-    
+	</ConnectContainer>
+
+
 )
 
 export default Connect
