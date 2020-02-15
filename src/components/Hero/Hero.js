@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react'
 import Button from '../Buttons'
 import { HeroContainer, ButtonContainer } from './Hero.styled'
