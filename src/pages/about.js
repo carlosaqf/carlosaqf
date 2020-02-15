@@ -6,6 +6,7 @@ import { device } from '../components/devices'
 
 const AboutContainer = styled.div`
   margin: 0 auto;
+  min-height: 96.5vh;
 `
 
 const AboutTitle = styled.h1`
@@ -61,7 +62,6 @@ const About = () => (
         I had fully relocated to the city of Chicago.
 
 				<AboutSubheading top="1">Looking Forward</AboutSubheading>
-
 
 			</AboutParagraph>
 		</AboutContainer>
