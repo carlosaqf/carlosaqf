@@ -14,6 +14,7 @@ const StyledCard = styled(animated.div)`
     /* box-shadow: ${color.SHADOW}; */
     box-shadow: ${color.SHADOWTWO};
     max-width: 90vw;
+    min-width: 25vw;
     will-change: transform, opacity;
 
 
