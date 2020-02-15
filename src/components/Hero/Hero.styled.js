@@ -38,7 +38,7 @@ const HeroContainer = styled.div`
     @media ${device.mobileS}{
         h1{
             text-transform: uppercase;
-            font-size: 3em;
+            font-size: 1.5em;
             margin-bottom: 0;
             color: #c8a415;
         }
@@ -60,7 +60,7 @@ const HeroContainer = styled.div`
 
         h1{
             text-transform: uppercase;
-            font-size: 5em;
+            font-size: 4em;
             margin-bottom: 0;
             color: #c8a415;
         }
@@ -83,7 +83,7 @@ const HeroContainer = styled.div`
 
         h1{
             text-transform: uppercase;
-            font-size: 6em;
+            font-size: 5em;
             margin-bottom: 0.1em;
             color: ${color.DARK};
         }
