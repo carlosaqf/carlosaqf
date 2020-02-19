@@ -17,6 +17,7 @@ const HeroContainer = styled.div`
     background-size: cover;
     
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
+    /* THIS IS A COMMENT! */
     
     height: 100vh;
     width: 100vw;
