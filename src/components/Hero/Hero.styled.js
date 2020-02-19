@@ -7,14 +7,17 @@ import { wordFadeIn } from '../animations'
 
 // CONTAINER
 const HeroContainer = styled.div`
-    background:
+    /* background:
         linear-gradient(
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         ),
-        url(${carlos});
+        url(${carlos}); */
+    background: ${color.BLUE};
     background-position: center;
     background-size: cover;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     
     height: 100vh;
     width: 100vw;
@@ -29,7 +32,6 @@ const HeroContainer = styled.div`
     color: white;
     text-align: center;
 
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%); */
    
    h2 {
        /* animation: ${wordFadeIn} 3s ease-in-out; */
