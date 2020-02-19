@@ -17,6 +17,7 @@ const NavbarContainer = styled.div`
     padding: 0.5em 1.8em 0em 1.8em;
     align-content: center;
     position: fixed;
+    z-index: 1;
     top: 0;
     
     @media ${device.mobileS}{
