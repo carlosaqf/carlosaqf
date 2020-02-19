@@ -11,9 +11,16 @@ const StyledButton = styled.button`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5);
+    outline: 0;
 
-    
-    // DEFINE BUTTON STYLES THROUGH PROPS
+    &:active{
+        box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5) inset;
+        outline: 0;
+    }
+
+
+
+    /* DEFINE BUTTON STYLES THROUGH PROPS */
     ${props => props.primary && css`
         background: ${color.DARK};
         color: #white;
