@@ -1,24 +1,50 @@
 import styled from 'styled-components'
+import { device } from '../devices'
 
 export const StyledBurger = styled.button`
     position: absolute;
-    top: 5%;
-    left: 2rem;
+    top: 25%;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
-    height: 2rem;
+    height: 1.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     z-index: 10;
+    outline: 0;
+
+    @media ${device.mobileS}{
+        left: 17rem;
+    }
+
+    @media ${device.mobileM}{
+        left: 20rem;
+    }
+
+    @media ${device.mobileL}{
+        left: 23rem;
+    }
+
+    @media ${device.tablet}{
+        left: -10rem;
+    }
+
+    @media ${device.laptop}{
+        left: -10rem;
+    }
+
+    @media ${device.laptopL}{
+        left: -10rem;
+    }
 
     span {
         width: 2rem;
         height: 0.25rem;
-        // background: add Theme
+        /* background: #fafafa; */
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;
