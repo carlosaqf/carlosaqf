@@ -5,7 +5,6 @@ import { color } from '../colors'
 const StyledBio = styled.div`
     margin: 0 auto;
     display: flex;
-    background: ${color.WHITE};
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
@@ -58,7 +57,7 @@ const StyledBioCardInfo = styled.div`
     }
 
     h3{
-        // EDIT BIO HEADLINE
+        /* EDIT BIO HEADLINE */
     }
 
     p{
