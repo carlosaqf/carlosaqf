@@ -7,13 +7,14 @@ import Button from '../components/Buttons'
 import { device } from '../components/devices'
 import Card from '../components/Cards'
 
-const WorkWrapper = styled.div`
+const WorkContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fafafa;
   padding-bottom: 10px;
   margin: 0 auto;
+  min-height: 96.5vh;
   h2{
       font-size: 2em;
       letter-spacing: 0.8em;
@@ -54,7 +55,7 @@ const Work = () => (
   <Layout>
     <SEO title="Work" />
     
-    <WorkWrapper>
+    <WorkContainer>
 
       <h2>Work</h2>
 
@@ -110,7 +111,7 @@ const Work = () => (
           />
 
       </CardsContainer>
-    </WorkWrapper>
+    </WorkContainer>
     
   </Layout>
 )
