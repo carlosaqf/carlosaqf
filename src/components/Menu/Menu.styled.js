@@ -19,6 +19,9 @@ export const StyledMenu = styled.nav`
     left: 0;
     transition: transform 0.3s ease-in-out;
     list-style-type: none;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 300;
 
     @media (max-width: '768px'){
         width: 100%;
@@ -27,8 +30,8 @@ export const StyledMenu = styled.nav`
     a {
         font-size: 2rem;
         text-transform: uppercase;
-        //padding: 2rem 0;
-        font-weight: bold;
+        /* padding: 2rem 0; */
+        font-weight: 500;
         letter-spacing: 0.5rem;
         color: ${color.DARK};
         text-decoration: none;
