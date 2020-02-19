@@ -11,8 +11,7 @@ const StyledLink = styled(Link)`
     padding-left: ${props => props.left || 0}em;
 
     :hover{
-        // border-bottom: 4px solid ${color.PRIMARY}
-        color: ${color.PRIMARY}
+        color: ${color.PRIMARY};
     }
     
 `
