@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
+import { Burger, Menu } from '../../components'
+import Link from '../Links/index'
+import { useSiteMetadata } from '../../hooks/use-site-metadata'
 import {
 	NavbarContainer,
 	NavbarLogo,
 	MenuName,
 	NavbarLinks,
 } from './Navbar.styled'
-import { Burger, Menu } from '../../components'
-import Link from '../Links/index'
-import { useSiteMetadata } from '../../hooks/use-site-metadata'
 
 const Navbar = () => {
 
@@ -24,7 +24,7 @@ const Navbar = () => {
 
 			<NavbarLogo>
 				<MenuName to="/">
-            C
+					C
 				</MenuName>
 			</NavbarLogo>
 
@@ -56,7 +56,6 @@ const Navbar = () => {
 				/>
 
 			</NavbarLinks>
-
 		</ NavbarContainer>
 	)
 }
