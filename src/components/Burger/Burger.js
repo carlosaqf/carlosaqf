@@ -1,26 +1,31 @@
 import React from 'react'
 import { StyledBurger } from './Burger.styled'
+import PropTypes from 'prop-types'
 
 const Burger = ({ open, setOpen, ...props }) => {
 
-    const isExpanded = open ? true : false
+	const isExpanded = open ? true : false
 
-    return (
-        <StyledBurger 
-            aria-label="Toggle menu" 
-            aria-expanded={isExpanded}
-            open={open}
-            onClick={() => {
-                setOpen(!open)
-            }}
-            {...props}>
-            
-            <span />
-            <span />
-            <span />
+	return (
+		<StyledBurger
+			aria-label="Toggle menu"
+			aria-expanded={isExpanded}
+			open={open}
+			onClick={() => {
+				setOpen(!open)
+			}}
+			{...props}>
+			<span />
+			<span />
+			<span />
 
-        </StyledBurger>
-    )
+		</StyledBurger>
+	)
 }
 
-export default Burger;
+Burger.propTypes = {
+	open: PropTypes.bool,
+	setOpen: PropTypes.bool
+}
+
+export default Burger
