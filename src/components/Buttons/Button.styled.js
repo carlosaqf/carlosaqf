@@ -11,11 +11,14 @@ const StyledButton = styled.button`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5);
-    outline: 0;
+    
 
     &:active{
         box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5) inset;
-        outline: 0;
+    }
+
+    :focus:not(:focus-visible) { 
+        outline: 0; 
     }
 
 
@@ -32,7 +35,7 @@ const StyledButton = styled.button`
 `
 
 export {
-    StyledButton
+	StyledButton
 }
 
 
