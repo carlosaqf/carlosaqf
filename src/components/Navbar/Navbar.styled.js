@@ -14,22 +14,28 @@ const NavbarContainer = styled.div`
     grid-template-areas:
     "logo logo . links"
     ;
-    padding: 0.5em 1.8em 0em 1.8em;
+    padding: 0.9rem 1.8rem 0rem 1.8rem;
     align-content: center;
     position: fixed;
     z-index: 1;
     top: 0;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+        );
     
     @media ${device.mobileS}{
     grid-template-areas:
     "logo links";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 100% 0;
     height: 3.5em;
     }
 
     @media ${device.tablet}{
     grid-template-areas: "logo links";
-    height: 3.5em;
+    height: 3.3rem;
+    grid-template-columns: 1fr 4fr;
     }
 `
 
@@ -44,13 +50,13 @@ const NavbarLogo = styled.h1`
   grid-area: logo;
 
   @media ${device.mobileS}{
-    font-size: 1em;
-    padding-top: 0.2em;
+    font-size: 1.6em;
+    justify-self: center;
+    padding-bottom: 1rem;
   }
 
   @media ${device.tablet}{
     font-size: 1em;
-    padding-top: 0.2em;
   }
 
   a{
@@ -100,37 +106,22 @@ const NavbarLinks = styled.ul`
     a{
       padding: 0.4em;
     }
+    padding-left: 2rem;
   }
 
   @media ${device.tablet}{
     a{
       padding: 1em;
+      font-weight: 300;
     }
+    padding-left: 0;
   }
 
 `
-
-// LINK STYLES
-const MenuLink = styled(Link)`
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding-top: ${props => props.top || 0}em;
-  padding-right: ${props => props.right || 0}em;
-  padding-bottom: ${props => props.bottom || 0}em;
-  padding-left: ${props => props.left || 0}em;
-`
-
-const ConnectLink = styled.a`
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-`
-
 
 export {
 	NavbarContainer,
 	NavbarLogo,
 	MenuName,
-	NavbarLinks,
-	MenuLink,
-	ConnectLink
+	NavbarLinks
 }
