@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { device } from '../devices'
+import { color } from '../colors'
 
 export const StyledBurger = styled.button`
     position: absolute;
     top: 25%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -42,44 +42,44 @@ export const StyledBurger = styled.button`
     }
 
     span {
-        width: 2rem;
+        width: 1.6rem;
         height: 0.25rem;
-        /* background: #fafafa; */
+        background: ${color.PRIMARY};
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;
         transform-origin: 1px;
 
         :first-child {
-            transform: ${({ open }) => 
-                open 
-                    ? 'rotate(45deg)' 
-                    : 'rotate(0)'
-            };
+            transform: ${({ open }) =>
+		open
+			? 'rotate(45deg)'
+			: 'rotate(0)'
+};
         }
 
         :nth-child(2){
-            opacity: ${({ open }) => 
-                open 
-                    ? '0' 
-                    : '1'
-            };
+            opacity: ${({ open }) =>
+		open
+			? '0'
+			: '1'
+};
 
-            transform: ${({ open }) => 
-                open 
-                    ? 'translateX(20px)' 
-                    : 'translateX(0)'
-            };
+            transform: ${({ open }) =>
+		open
+			? 'translateX(20px)'
+			: 'translateX(0)'
+};
 
         }
 
         :nth-child(3){
-            transform: ${({ open }) => 
-                open 
-                    ? 'rotate(-45deg)' 
-                    : 'rotate(0)'
-            };
+            transform: ${({ open }) =>
+		open
+			? 'rotate(-45deg)'
+			: 'rotate(0)'
+};
         }
     }
-`;
+`
 
