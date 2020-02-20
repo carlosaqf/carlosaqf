@@ -33,23 +33,25 @@ const HeroContainer = styled.div`
     text-align: center;
 
    
-   h2 {
-       /* animation: ${wordFadeIn} 3s ease-in-out; */
+   h1,h2 {
+       margin-bottom: 0;
    }
     
     @media ${device.mobileS}{
+        
+        padding-left: 0.5rem;
+        
         h1{
             text-transform: uppercase;
-            font-size: 1.5em;
-            margin-bottom: 0;
-            color: #c8a415;
+            font-size: 2rem;
+            color: ${color.PRIMARY};
+            text-align: left;
         }
         
         h2{
             text-transform: uppercase;
             letter-spacing: 0.4em;
             font-weight: 400;
-            margin-bottom: 0;
             font-size: 1em;
         }
         
@@ -62,22 +64,21 @@ const HeroContainer = styled.div`
 
         h1{
             text-transform: uppercase;
-            font-size: 4em;
-            margin-bottom: 0;
-            color: #c8a415;
+            font-size: 3rem;
+            color: ${color.PRIMARY};
         }
         
         h2{
             text-transform: uppercase;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.4rem;
             font-weight: 400;
-            margin-bottom: 0;
-            font-size: 2em;
+            font-size: 1.5rem;
         }
         
         p{
             font-size: 1.4em;
             letter-spacing: 0.08em;
+            font-weight: 300;
         }
         
     }
