@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { device } from '../devices'
-import { color } from '../colors'
 
 const StyledBio = styled.div`
     margin: 0 auto;
