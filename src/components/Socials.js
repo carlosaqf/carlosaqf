@@ -31,12 +31,12 @@ const Socials = () => (
 
 	<SocialContainer>
 		<IconContainer>
-			<a href="https://www.github.com/carlosaqf" target="_blank" rel="noopener noreferrer"><GithubSocial /></a>
-			<a href="https://www.linkedin.com/in/cfegurgur" target="_blank" rel="noopener noreferrer"><LinkedinSocial /></a>
+			<a href="https://www.github.com/carlosaqf"><GithubSocial /></a>
+			<a href="https://www.linkedin.com/in/cfegurgur"><LinkedinSocial /></a>
 		</IconContainer>
 		<IconContainer>
-			<a href="https://www.instagram.com/cfegurgur" target="_blank" rel="noopener noreferrer"><InstagramSocial /></a>
-			<a href="https://www.twitter.com/cfegurgur_" target="_blank" rel="noopener noreferrer"><TwitterSocial /></a>
+			<a href="https://www.instagram.com/cfegurgur"><InstagramSocial /></a>
+			<a href="https://www.twitter.com/cfegurgur_"><TwitterSocial /></a>
 		</IconContainer>
 	</SocialContainer>
 
