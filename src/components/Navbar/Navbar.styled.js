@@ -3,7 +3,6 @@ import { color } from '../colors'
 import { device } from '../devices'
 import { Link } from 'gatsby'
 
-// NAVBAR CONTAINER
 const NavbarContainer = styled.div`
     width: 100vw;
     height: 7.0vh;
@@ -26,16 +25,20 @@ const NavbarContainer = styled.div`
         );
     
     @media ${device.mobileS}{
-    grid-template-areas:
-    "logo links";
-    grid-template-columns: 100% 0;
-    height: 3.5em;
+      grid-template-areas:
+      "logo links";
+      grid-template-columns: 100% 0;
+      height: 3.5em;
     }
 
     @media ${device.tablet}{
-    grid-template-areas: "logo links";
-    height: 3.3rem;
-    grid-template-columns: 1fr 4fr;
+      grid-template-areas: "logo links";
+      height: 3.3rem;
+      grid-template-columns: 1fr 4fr;
+    }
+
+    @media ${device.laptopL}{
+      grid-template-columns: 1fr 6fr;
     }
 `
 
