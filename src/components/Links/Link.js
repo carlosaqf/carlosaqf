@@ -3,6 +3,7 @@ import { StyledLink } from './Link.styled'
 import PropTypes from 'prop-types'
 
 const Link = ({ page, text }) => {
+
 	return(
 		<li>
 			<StyledLink to={page}>{text}</StyledLink>
