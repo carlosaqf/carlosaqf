@@ -17,4 +17,10 @@ export const color = {
   `,
 	SHADOWTWO: '0 3px 4px 0 rgba(0,0,0,0.5)',
 
+	SHADE_LIGHT: '#F2F2F2',
+	ACCENT_LIGHT: '#858C8E',
+	MAIN_BRAND: '#F1C40F',
+	ACCENT_DARK: '#2C3E50',
+	SHADE_DARK: '#29282A'
+	
 }
