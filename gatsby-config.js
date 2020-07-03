@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = {
 	siteMetadata: {
-		title: 'Carlos Fegurgur | Web Developer | Chicago, IL',
+		title: 'CF | Dev',
 		menuLinks:[
 			{
 				name:'home',
@@ -61,7 +61,7 @@ module.exports = {
 				short_name: 'starter',
 				start_url: '/',
 				display: 'minimal-ui',
-				icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+				icon: 'src/images/personalLogoMk3-512.png', // This path is relative to the root of the site.
 			},
 		},
 		'gatsby-transformer-remark',
