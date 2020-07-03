@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -23,7 +23,7 @@ const WorkContainer = styled.div`
       text-align: center;
       text-transform: uppercase;
   }
-`;
+`
 
 const CardsContainer = styled.div`
     display: grid;
@@ -42,7 +42,7 @@ const CardsContainer = styled.div`
     @media ${device.laptop}{
       grid-template-columns: repeat(3, 1fr);
     }
-`;
+`
 
 
 
@@ -52,68 +52,68 @@ const CardsContainer = styled.div`
 
 const Work = () => (
 
-  <Layout>
-    <SEO title="Work" />
-    
-    <WorkContainer>
+	<Layout>
+		<SEO title="Work" />
 
-      <h2>Work</h2>
+		<WorkContainer>
 
-      <CardsContainer>
+			<h2>Work</h2>
 
-          <Card 
-                title='Project 1'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 2'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 3'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 4'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 5'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 6'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 7'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
-          <Card 
-                title='Project 8'
-                desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-                text='Visit Demo'
-                to='https://www.github.com/carlosaqf/notes'
-          />
+			<CardsContainer>
 
-      </CardsContainer>
-    </WorkContainer>
-    
-  </Layout>
+				<Card
+					title='Project 1'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 2'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 3'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 4'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 5'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 6'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 7'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+				<Card
+					title='Project 8'
+					desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+					text='Visit Demo'
+					to='https://www.github.com/carlosaqf/notes'
+				/>
+
+			</CardsContainer>
+		</WorkContainer>
+
+	</Layout>
 )
 
 export default Work

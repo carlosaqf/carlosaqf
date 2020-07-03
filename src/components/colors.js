@@ -22,5 +22,5 @@ export const color = {
 	MAIN_BRAND: '#F1C40F',
 	ACCENT_DARK: '#2C3E50',
 	SHADE_DARK: '#29282A'
-	
+
 }

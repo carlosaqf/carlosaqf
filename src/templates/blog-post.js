@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout';
-import styled from 'styled-components';
+import Layout from '../components/layout'
+import styled from 'styled-components'
 import { device } from '../components/devices'
 
 
@@ -21,7 +21,7 @@ const BlogDiv = styled.div`
     @media ${device.laptop}{
         width: 75vw;
     }
-`;
+`
 
 const BlogImg = styled.img`
   width: 70vw;
@@ -29,37 +29,37 @@ const BlogImg = styled.img`
   background-position: center;
   background-size: cover;
   margin: 1em auto 0 auto;
-`;
+`
 
 const ImgCaption = styled.figcaption`
     font-size: 0.5em;
     font-family: Arial;
     letter-spacing: 0.08em;
     float: right;
-`;
+`
 
 const BlogInfo = styled.p`
     font-size: 0.8em;
     letter-spacing: 0.08em;
     margin-top: 0;
     padding-top: 0;
-`;
+`
 
 export default ({ data }) => {
-    const post = data.markdownRemark
-    return (
-        <Layout>
-            <BlogDiv>
-                <h1>{post.frontmatter.title}</h1>
-                <figure>
-                    <BlogImg src={post.frontmatter.image}></BlogImg>
-                    <ImgCaption>Image courtesy of <a href="https://unsplash.com">Unsplash</a></ImgCaption>
-                </figure>
-                <BlogInfo>{post.frontmatter.author} - {post.frontmatter.date}</BlogInfo>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </BlogDiv>
-        </Layout>
-    )
+	const post = data.markdownRemark
+	return (
+		<Layout>
+			<BlogDiv>
+				<h1>{post.frontmatter.title}</h1>
+				<figure>
+					<BlogImg src={post.frontmatter.image}></BlogImg>
+					<ImgCaption>Image courtesy of <a href="https://unsplash.com">Unsplash</a></ImgCaption>
+				</figure>
+				<BlogInfo>{post.frontmatter.author} - {post.frontmatter.date}</BlogInfo>
+				<div dangerouslySetInnerHTML={{ __html: post.html }} />
+			</BlogDiv>
+		</Layout>
+	)
 }
 
 export const query = graphql`

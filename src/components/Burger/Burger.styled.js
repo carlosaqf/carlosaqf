@@ -21,33 +21,16 @@ const BurgerLine = styled.span`
 	transform-origin: 0.25em;
 
 	:first-child {
-		transform: ${({ open }) =>
-			open
-			? 'rotate(45deg)'
-			: 'rotate(0)'
-		};
+		transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'}
     }
 
 	:nth-child(2){
-		opacity: ${({ open }) =>
-			open
-			? '0'
-			: '1'
-		};
-
-		transform: ${({ open }) =>
-			open
-			? 'translateX(20px)'
-			: 'translateX(0)'
-		};
+		opacity: ${ ({ open }) => open ? '0' : '1' };
+		transform: ${ ({ open }) => open ? 'translateX(20px)' : 'translateX(0)' }
 	}
 
 	:nth-child(3){
-		transform: ${({ open }) =>
-			open
-			? 'rotate(-45deg)'
-			: 'rotate(0)'
-		};
+		transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)' };
 		margin-bottom: 0.5em;
 	}
 

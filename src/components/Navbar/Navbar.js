@@ -55,7 +55,7 @@ const Navbar = () => {
 				/>
 			</NavbarLinks>
 
-			<Burger 
+			<Burger
 				open={open}
 				setOpen={setOpen}
 				aria-controls={menuId}

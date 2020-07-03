@@ -4,10 +4,10 @@ import { color } from '../colors'
 const StyledMenu = styled.div`
 
     display: ${({ open }) =>
-        open
-            ? 'flex'
-            : 'none'
-    };
+		open
+			? 'flex'
+			: 'none'
+};
     flex-direction: column;
     justify-content: center;
     background: ${color.WHITE};
@@ -45,6 +45,6 @@ const MenuLinks = styled.ul`
 `
 
 export {
-    StyledMenu,
-    MenuLinks
+	StyledMenu,
+	MenuLinks
 }

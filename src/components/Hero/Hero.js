@@ -8,7 +8,7 @@ const Hero = () => {
 	return(
 		<HeroContainer>
 
-			<h2>Hafa Adai, I'm</h2>
+			<h2>Hafa Adai, I&apos;m</h2>
 			<h1>Carlos Fegurgur</h1>
 			<p>Front End Web Developer | Chicago, IL</p>
 

@@ -17,15 +17,15 @@ const Menu = ({ open, ...props }) => {
 				<Link
 					page={menuLinks[1].link}
 					text={menuLinks[1].name}
-					/>
+				/>
 				<Link
 					page={menuLinks[2].link}
 					text={menuLinks[2].name}
-					/>
+				/>
 				<Link
 					page={menuLinks[3].link}
 					text={menuLinks[3].name}
-					/>
+				/>
 				<Link
 					page={menuLinks[4].link}
 					text={menuLinks[4].name}
