@@ -188,7 +188,8 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 * {
   box-sizing: inherit;
@@ -618,8 +619,8 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
-}
+} */
