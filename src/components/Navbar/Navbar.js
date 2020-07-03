@@ -5,9 +5,9 @@ import { useSiteMetadata } from '../../hooks/use-site-metadata'
 import {
 	NavbarContainer,
 	NavbarLogo,
-	MenuName,
 	NavbarLinks,
 } from './Navbar.styled'
+
 
 const Navbar = () => {
 
@@ -18,44 +18,48 @@ const Navbar = () => {
 	return(
 		<NavbarContainer>
 
-			{/* LOGO */}
-			<Burger open={open} setOpen={setOpen} aria-controls={menuId} />
 			<Menu open={open} setOpen={setOpen} id={menuId} />
 
 			<NavbarLogo>
-				<MenuName to="/">
-					C
-				</MenuName>
+				<span className="displayInitials">
+					<Link
+						page={menuLinks[0].link}
+						text={'CF'}
+					/>
+				</span>
+
+				<span className="displayFullName">
+					<Link
+						page={menuLinks[0].link}
+						text={'CFEGURGUR'}
+					/>
+				</span>
 			</NavbarLogo>
 
-			{/* LINKS */}
 			<NavbarLinks>
-
-				{/* ABOUT */}
 				<Link
 					page={menuLinks[1].link}
 					text={menuLinks[1].name}
 				/>
-
-				{/* WORK */}
 				<Link
 					page={menuLinks[2].link}
 					text={menuLinks[2].name}
 				/>
-
-				{/* BLOG */}
 				<Link
 					page={menuLinks[3].link}
 					text={menuLinks[3].name}
 				/>
-
-				{/* CONNECT */}
 				<Link
 					page={menuLinks[4].link}
 					text={menuLinks[4].name}
 				/>
-
 			</NavbarLinks>
+
+			<Burger 
+				open={open}
+				setOpen={setOpen}
+				aria-controls={menuId}
+			/>
 		</ NavbarContainer>
 	)
 }

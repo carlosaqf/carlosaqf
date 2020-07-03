@@ -1,123 +1,89 @@
 import styled from 'styled-components'
 import { color } from '../colors'
 import { device } from '../devices'
-import { Link } from 'gatsby'
 
 const NavbarContainer = styled.div`
-    width: 100vw;
-    height: 7.0vh;
-    margin: 0 auto;
-    display: grid;
-    background: transparent;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    "logo logo . links"
-    ;
-    padding: 0.9rem 1.8rem 0rem 1.8rem;
-    align-content: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.2)
-        );
-    
-    @media ${device.mobileS}{
-      grid-template-areas:
-      "logo links";
-      grid-template-columns: 100% 0;
-      height: 3.5em;
-    }
 
-    @media ${device.tablet}{
-      grid-template-areas: "logo links";
-      height: 3.3rem;
-      grid-template-columns: 1fr 4fr;
-    }
+  max-width: 66em;
+  margin: 0 auto; 
+  display: flex;
 
-    @media ${device.laptopL}{
-      grid-template-columns: 1fr 6fr;
-    }
+  justify-content: center;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+
 `
 
 // LOGO
 const NavbarLogo = styled.h1`
   
-  margin: 0;
-  font-size: 1.3em;
+  margin: 0 auto 0 0;
+  font-size: 1em;
   text-transform: uppercase;
+  align-self: center;
   font-weight: 600;
-  letter-spacing: 3px;
-  grid-area: logo;
-
-  @media ${device.mobileS}{
-    font-size: 1.6em;
-    justify-self: center;
-    padding-bottom: 1rem;
-  }
-
-  @media ${device.tablet}{
-    font-size: 1em;
-  }
-
-  a{
-    color: ${color.PRIMARY};
-    text-decoration: none;
-  }
-`
-
-const MenuName = styled(Link)`
   
-  @media ${device.mobileS}{
-    ::after{
-        content: "F";
-    }
+  a {
+    letter-spacing: 0.4em;
+    color: ${color.MAIN_BRAND};
+    text-decoration: none;
+    padding: 0.6em;
+    padding-left: 0;
   }
 
-  @media ${device.mobileL}{
-    ::after{
-      content: "AQF"
-    }
+  li {
+    list-style-type: none;
+  }
+
+  .displayInitials {
+    display: inline-block;
+  }
+
+  .displayFullName {
+    display: none;
   }
 
   @media ${device.tablet}{
-    ::after{
-      content: "arlosaqf"
+
+    .displayInitials{
+      display:none;
+    }
+
+    .displayFullName{
+      display:inline-block;
     }
   }
+
+
 `
 
 // LINKS
 const NavbarLinks = styled.ul`
-  margin: 0 0 0 auto;
+  margin:0 0 0 auto;
   list-style: none;
-  display: flex;
+  display: none;
   align-items: center;
   font-family: Helvetica;
-  grid-area: links;
   font-size: 1em;
-
+  
   a{
     text-decoration: none;
-    color: ${color.WHITE};
-  }
-
-  @media ${device.mobileS}{
+    color: ${color.MAIN_BRAND};
+    padding: 0.6em;
+    font-weight: 300;
     font-size: 1em;
+    transition: all 300ms linear 0s;
+  }
+  
+  & li:nth-child(4){
     a{
-      padding: 0.4em;
+      padding-right: 0;
     }
-    padding-left: 2rem;
   }
 
   @media ${device.tablet}{
-    a{
-      padding: 1em;
-      font-weight: 300;
-    }
-    padding-left: 0;
+    display: flex;
   }
 
 `
@@ -125,6 +91,5 @@ const NavbarLinks = styled.ul`
 export {
 	NavbarContainer,
 	NavbarLogo,
-	MenuName,
 	NavbarLinks
 }
