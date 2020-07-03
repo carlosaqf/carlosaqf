@@ -19,6 +19,7 @@ const BurgerLine = styled.span`
 	border-radius: 0.5em;
 	transition: all 0.3s linear;
 	transform-origin: 0.25em;
+	z-index: 2;
 
 	:first-child {
 		transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'}

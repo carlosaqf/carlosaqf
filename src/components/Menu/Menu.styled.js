@@ -17,6 +17,7 @@ const StyledMenu = styled.div`
     text-align: left;
     padding: 2rem;
     position: absolute;
+    z-index: 1;
     top: 0;
     transition: transform 0.3s ease-in-out;
     list-style-type: none;
