@@ -69,3 +69,12 @@ const About = () => (
 )
 
 export default About
+
+
+// I am passionate about solving problems; breaking things apart until I can find
+// what is needed to fix it brings me joy. I also consider myself to be a lifelong learning
+// and am constantly looking for new and interesting tidbits of knowledge.
+// Programming allows me to bridge these two interests together.
+
+// I'd love to _learn_ about how I can _solve_ your _problems_, especially if the
+// solution involves a web application of some kind. I'm only an email away!
