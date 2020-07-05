@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { device }  from '../devices'
 
 const ProjectsContainer = styled.div`
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
-    margin: 0 auto;
     
     a{
         padding-top: 2rem;
@@ -22,7 +22,6 @@ const ProjectsContainer = styled.div`
     @media ${device.mobileS}{ 
         h2{
             font-size: 1.5em;
-            letter-spacing: 0.6em;
             text-align: center;
         }
     }
@@ -30,9 +29,12 @@ const ProjectsContainer = styled.div`
 
 const CardsContainer = styled.div`
     display: flex;
-    max-width: 90vw;
+    flex-direction: column;
+    max-width: 66em;
+    justify-content: center;
+    align-content: center;
 
-    @media (max-width: 768px){
+    @media ${device.laptop}{
         flex-direction: column;
     }
 `
