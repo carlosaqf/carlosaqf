@@ -1,54 +1,57 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { color } from '../colors'
-import { animated } from 'react-spring'
+import { device } from '../devices'
 
-const StyledCard = styled(animated.div)`
-    background: url("https://source.unsplash.com/random/400x400");
-    background-size: cover;
-    background-position: center;
+const StyledCard = styled.div`
     margin: 0.5em;
-    height: 20em;
-    padding: 0.8em 0.8em 0 0.8em;
     display: flex;
-    align-items: flex-end;
-    /* box-shadow: ${color.SHADOW}; */
+    flex-direction: column;
     box-shadow: ${color.SHADOWTWO};
-    max-width: 90vw;
-    min-width: 25vw;
-    will-change: transform, opacity;
+    background: ${color.SHADE_LIGHT};
+    color: ${color.SHADE_DARK};
+    
+    @media ${device.tablet}{
+        flex-direction: row;
+    }
 
-
-    button{
-        margin-bottom: 0.5em;
+    @media ${device.laptopL}{
+        min-width: 66em;
     }
 `
 
-const StyledText = styled(animated.p)`
-    will-change: transform, opacity;
+const CardImg = styled.img`
+    margin: 0;
+
 `
-
-
 
 const CardInfo = styled.div`
-    color: white;
-    text-align: left;
+    margin: 0;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
     
-    h3{
-        margin-bottom: 0.5em;
+    
+    @media ${device.laptop}{
+        justify-content: center;
     }
-    
-    button{
-        margin-left: 0;
-        box-shadow: none;
-    }
-    
-    ${props => props.project && css`
-        
-    `}
+
+`
+
+const CardInfoHeader = styled.h3`
+    text-transform: capitalize;
+`
+
+const CardInfoDescription = styled.p`
+
 `
 
 export {
 	StyledCard,
+	CardImg,
 	CardInfo,
-	StyledText
+	CardInfoHeader,
+	CardInfoDescription
 }
