@@ -15,8 +15,14 @@ const Projects = () => (
 		<CardsContainer>
 
 			<Card
-				project
 				title='Project 1'
+				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
+				text='View Demo'
+				text2='Source'
+				to='https://www.github.com/carlosaqf/notes'
+			/>
+			<Card
+				title='Project 2'
 				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
 				text='View Demo'
 				text2='Source'
@@ -24,25 +30,14 @@ const Projects = () => (
 			/>
 
 			<Card
-				project
-				title='Project 2'
-				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-				text='Visit Demo'
-				text2='Source'
-				to='https://www.github.com/carlosaqf/notes'
-			/>
-
-			<Card
-				project
 				title='Project 3'
 				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-				text='Visit Demo'
+				text='View Demo'
 				text2='Source'
 				to='https://www.github.com/carlosaqf/notes'
 			/>
 
 		</CardsContainer>
-
 
 		<Button
 			text='See my Work'
