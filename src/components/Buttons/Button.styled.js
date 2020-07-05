@@ -4,17 +4,17 @@ import { color } from '../colors'
 const StyledButton = styled.button`
     background: transparent;
     border-radius: 3px;
-    border: 2px solid ${color.DARK};
+    border: 2px solid ${color.MAIN_BRAND};
     color: white;
     margin: 0 1em;
     padding: 0.25em 1em;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5);
+    box-shadow: ${color.SHADOWTWO};
     
 
     &:active{
-        box-shadow: 0 3px 4px 0 rgba(0,0,0,0.5) inset;
+        box-shadow: ${color.SHADOWTWO} inset;
     }
 
     :focus:not(:focus-visible) { 
@@ -25,8 +25,8 @@ const StyledButton = styled.button`
 
     /* DEFINE BUTTON STYLES THROUGH PROPS */
     ${props => props.primary && css`
-        background: ${color.DARK};
-        color: #white;
+        background: ${color.MAIN_BRAND};
+        color: ${color.SHADE_LIGHT};
     `}
 
     ${props => props.secondary && css`
