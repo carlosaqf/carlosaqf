@@ -44,7 +44,7 @@ const HeroContainer = styled.div`
         h1{
             text-transform: uppercase;
             font-size: 2rem;
-            color: ${color.PRIMARY};
+            color: ${color.MAIN_BRAND};
             text-align: left;
         }
         
@@ -65,7 +65,7 @@ const HeroContainer = styled.div`
         h1{
             text-transform: uppercase;
             font-size: 3rem;
-            color: ${color.PRIMARY};
+            color: ${color.MAIN_BRAND};
         }
         
         h2{
@@ -88,7 +88,7 @@ const HeroContainer = styled.div`
             text-transform: uppercase;
             font-size: 5em;
             margin-bottom: 0.1em;
-            color: ${color.DARK};
+            color: ${color.MAIN_BRAND};
         }
         
         h2{
