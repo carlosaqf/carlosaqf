@@ -4,6 +4,7 @@ description: A look on how we can implement and improve our daily routines.
 date: '2019-04-20'
 image: 'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80'
 author: Carlos Fegurgur
+type: blog
 ---
 Refactoring is the process in programming by which you improve upon your already existing code. Over the next couple of weeks, I will be exploring ways in which you could begin to apply this coding practice to your personal life, improving upon that which may already exist. 
 

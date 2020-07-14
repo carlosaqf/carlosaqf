@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
+import styled from 'styled-components'
 import { device } from '../../components/devices'
 
 const BlogWrapper = styled.div`
@@ -46,45 +47,52 @@ const BlogImg = styled.img`
   border-radius: 0.5em 0.5em 0 0;
 `
 
-
-const Blog = ({ data }) => {
-	return (
-		<Layout>
-			<SEO title="Blog" />
-			<BlogWrapper>
-				<h2>Blog</h2>
-				<p>Welcome to the Blog Page. Here I will explain who I am and what
+const Blog = ({ data }) => (
+	<Layout>
+		<SEO title="Blog" />
+		<BlogWrapper>
+			<h2>Blog</h2>
+			<p>Welcome to the Blog Page. Here I will explain who I am and what
           it is I hope to accomplish with this blog. Get to know me!
-				</p>
-				<h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-				{data.allMarkdownRemark.edges.map(({ node }) => (
+			</p>
+			<h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+			{data.allMarkdownRemark.edges.map(({ node }) => (
+				(node.frontmatter.type === 'blog') ? (
 					<BlogPost key={node.id}>
 						<Link
 							to={node.fields.slug}
 							style={{
 								textDecoration: 'none',
 								color: 'inherit',
-							}} >
-							<BlogImg src={node.frontmatter.image}></BlogImg>
+							}}>
+							<BlogImg src={node.frontmatter.image} />
 							<h3 style={{
 								textAlign: 'left',
 								paddingTop: '0.5em',
 								paddingLeft: '0.5em',
-							}}>{node.frontmatter.title} - {node.frontmatter.date}</h3>
+							}}>
+								{node.frontmatter.title} - {node.frontmatter.date}
+							</h3>
 							<p>{node.excerpt}</p>
 						</Link>
 					</BlogPost>
-				))}
-			</BlogWrapper>
-		</Layout>
-	)
-}
+				) : (
+					null
+				)
+			))}
+		</BlogWrapper>
+	</Layout>
+)
+
 
 export default Blog
 
 export const query = graphql`
   query{
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+		filter: { frontmatter: { type: {eq: "blog"} } },
+		sort: { fields: [frontmatter___date], order: DESC }
+	){
       totalCount
       edges {
         node {
@@ -94,6 +102,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             image
             author
+            type
           }
           fields {
             slug

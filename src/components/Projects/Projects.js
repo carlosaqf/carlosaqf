@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import Button from '../Buttons'
 import  Card from '../Cards'
@@ -7,35 +8,22 @@ import {
 } from './Projects.styled'
 
 
-const Projects = () => (
+const Projects = ({ data }) => (
 	<ProjectsContainer>
 
 		<h2>PROJECTS</h2>
 
 		<CardsContainer>
-
-			<Card
-				title='Project 1'
-				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-				text='View Demo'
-				text2='Source'
-				to='https://www.github.com/carlosaqf/notes'
-			/>
-			<Card
-				title='Project 2'
-				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-				text='View Demo'
-				text2='Source'
-				to='https://www.github.com/carlosaqf/notes'
-			/>
-
-			<Card
-				title='Project 3'
-				desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magnam.'
-				text='View Demo'
-				text2='Source'
-				to='https://www.github.com/carlosaqf/notes'
-			/>
+			{data.allMarkdownRemark.edges.map(({ node }) => (
+				<Card
+					key={node.id}
+					title={node.frontmatter.title}
+					desc={(node.frontmatter.description) ? node.frontmatter.description : node.excerpt}
+					text='More Info'
+					to={node.fields.slug}
+					src={node.frontmatter.image}
+				/>
+			))}
 
 		</CardsContainer>
 

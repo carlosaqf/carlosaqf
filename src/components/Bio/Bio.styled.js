@@ -26,7 +26,7 @@ const StyledBio = styled.div`
 const StyledBioCard = styled.div`
     display: grid;
     justify-content: center;
-    max-width: 75vw;
+    max-width: 66em;
     min-height: auto;
     padding: 1em;
 
