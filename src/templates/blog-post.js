@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
