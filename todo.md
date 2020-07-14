@@ -1,9 +1,7 @@
-- Move about me section to a card
-- Pic | Color block with text and button to link to About section
+- Combine footer with Connect section into one big footer with links
+- Add icons to navbar
+- Add social icons to small navbar menu
+- Add contact form
 
-- Update Projects section
-- Remove cards from Main page in lieu of a sleeker looking, minimalist listing
+- Look into Gatbsy redirection links on same page
 
-- Add contact form back
-
-- update footer with ways to connect
