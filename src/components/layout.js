@@ -19,6 +19,7 @@ const Layout = ({ children }) => (
 				margin: '0 auto',
 				overflow: 'hidden',
 				padding: '0',
+				minHeight: '100vh',
 			}}
 		>
 			<main>{children}</main>
