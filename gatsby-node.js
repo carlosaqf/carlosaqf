@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -5,107 +6,77 @@
  */
 
 // You can delete this file if you're not using it
-const path = require(`path`)
-const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`);
-
-// exports.createPages = ({ actions, graphql }) => {
-//     const { createPage } = actions
-
-//     const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
-
-//     return new Promise((resolve, reject) => {
-
-//         resolve(graphql(`
-//         {
-//             allMarkdownRemark(
-//                 sort: { order: DESC, fields: [frontmatter__date] }
-//                 limit: 1000
-//             ) {
-//                 edges {
-//                     node {
-//                         fields{
-//                             slug
-//                         }
-//                         frontmatter{
-//                             title
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//         `).then(result => {
-//             if (result.errors) {
-//                 console.log(result.errors)
-//                 return reject(result.errors)
-//             }
-
-//             const blogTemplate = path.resolve('./src/templates/blog-post.js');
-            
-//             result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//                 createPage({
-//                     path: node.fields.slug,
-//                     component: blogTemplate,
-//                     context: {
-//                         slug: node.fields.slug,
-//                     }, // additional data can be passed via context
-//                 })
-//             })
-//             return
-//         })
-//         )
-//     })
-// }
-
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//     const { createNodeField } = actions
-//     if (node.internal.type === `MarkdownRemark`) {
-//         const slug = createFilePath({ node, getNode, basePath: `pages`})
-//         createNodeField({
-//             node,
-//             name: `slug`,
-//             value: slug,
-//         })
-//     }
-// }
-
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField } = actions
-    if (node.internal.type === `MarkdownRemark`) {
-        const slug = createFilePath({ node, getNode, basePath: `pages` })
-        createNodeField({
-            node,
-            name: `slug`,
-            value: slug,
-        })
-    }
+	const { createNodeField } = actions
+	if (node.internal.type === 'MarkdownRemark') {
+		const slug = createFilePath({ node, getNode, basePath: 'pages' })
+		createNodeField({
+			node,
+			name: 'slug',
+			value: slug,
+		})
+	}
 }
 
-exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
-    return graphql(`
-        {
-            allMarkdownRemark{
-                edges{
-                    node{
-                        fields{
-                            slug
-                        }
-                    }
-                }
-            }
-        }
-    `).then(result =>{
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-            createPage({
-                path: node.fields.slug,
-                component: path.resolve(`./src/templates/blog-post.js`),
-                context: {
-                    // Data passed to context is available
-                    // in page queries as GraphQL variables.
-                    slug: node.fields.slug,
-                },
-            })
-        })
-    })
+exports.createPages = async ({ graphql, actions }) => {
+	const { createPage } = actions
+	// List templates
+	const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
+	const projectTemplate = path.resolve('./src/templates/project.js')
+
+	return graphql(`
+	    {
+	        allMarkdownRemark{
+	            edges{
+	                node{
+	                    fields{
+	                        slug
+						}
+						frontmatter{
+							title
+							date
+							type
+						}
+	                }
+	            }
+	        }
+		}
+	`).then(result => {
+
+		result.data.allMarkdownRemark.edges.forEach(edge => {
+			if (edge.node.frontmatter.type === 'blog') {
+				createPage({
+					path: edge.node.fields.slug,
+					component: blogPostTemplate,
+					context: {
+						slug: edge.node.fields.slug
+					}
+				})
+			} else if (edge.node.frontmatter.type === 'project') {
+				createPage({
+					path: edge.node.fields.slug,
+					component: projectTemplate,
+					context: {
+						slug: edge.node.fields.slug
+					}
+				})
+			}
+		})
+	})
+	// `).then(result => {
+	// 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	// 		createPage({
+	// 			path: node.fields.slug,
+	// 			component: blogPostTemplate,
+	// 			context: {
+	// 				// Data passed to context is available
+	// 				// in page queries as GraphQL variables.
+	// 				slug: node.fields.slug,
+	// 			},
+	// 		})
+	// 	})
+	// })
 }
