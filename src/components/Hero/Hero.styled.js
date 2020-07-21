@@ -1,134 +1,78 @@
 /* eslint-disable linebreak-style */
 import styled from 'styled-components'
-import { device } from '../devices'
 import { color } from '../colors'
-import carlos from '../../images/carlos2.jpeg'
-import { wordFadeIn } from '../animations'
+import { device } from '../devices'
 
-// CONTAINER
 const HeroContainer = styled.div`
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        ),
-        url(${carlos});
-    background-position: center;
-    background-size: cover;
-    
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
-    /* THIS IS A COMMENT! */
-    
-    height: 100vh;
-    width: 100vw;
+    background: ${color.SHADE_DARK};
     margin: 0 auto;
-    padding-left: 2rem;
-    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
-    color: white;
-    text-align: center;
+    flex-direction: column; 
+    align-items: center;
+    /* background-color: #29282a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='336' height='336' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%236e6e6e' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%236e6e6e'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E"); */
 
-   
-   h1,h2 {
-       margin-bottom: 0;
-   }
-    
-    @media ${device.mobileS}{
-        
-        padding-left: 0.5rem;
-        
-        h1{
-            text-transform: uppercase;
-            font-size: 2rem;
-            color: ${color.MAIN_BRAND};
-            text-align: left;
-        }
-        
-        h2{
-            text-transform: uppercase;
-            letter-spacing: 0.4em;
-            font-weight: 400;
-            font-size: 1em;
-        }
-        
-        p{
-            font-size: 0.9em;
-            letter-spacing: 0.08em;
-        }
-    }
-    @media ${device.tablet}{
-
-        h1{
-            text-transform: uppercase;
-            font-size: 3rem;
-            color: ${color.MAIN_BRAND};
-        }
-        
-        h2{
-            text-transform: uppercase;
-            letter-spacing: 0.4rem;
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-        
-        p{
-            font-size: 1.4em;
-            letter-spacing: 0.08em;
-            font-weight: 300;
-        }
-        
-    }
-    @media ${device.laptop}{
-
-        h1{
-            text-transform: uppercase;
-            font-size: 5em;
-            margin-bottom: 0.1em;
-            color: ${color.MAIN_BRAND};
-        }
-        
-        h2{
-            text-transform: uppercase;
-            letter-spacing: 0.4em;
-            font-weight: 400;
-            margin-bottom: 0;
-            font-size: 2.7em;
-        }
-        
-        p{
-            font-size: 2em;
-            letter-spacing: 0.08em;
-        }
-        
+    &::after{
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 4em;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 70 500 60' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='500' style='stroke: none; fill: %23fff;' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none; fill: %2329282A;'%3E%3C/path%3E%3C/svg%3E");
     }
 `
 
-// BUTTON DIV
-const ButtonContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    animation: ${wordFadeIn} 1.5s ease-in-out;
+const StyledHero = styled.div`
+    align-self: flex-start;
 
-    @media ${device.mobileS}{
-        flex-direction: column;
+    @media ${device.laptopL}{
+        width: 66em;
+        align-self: center;
+    }
     
-        a{
-            margin-top: 1em;
-        }
+`
+
+const HeroText = styled.div`
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 1em;
+    color: ${color.SHADE_LIGHT};
+    
+    h1 {
+        text-transform: uppercase;
+        font-size: 4em;
+        color: ${color.MAIN_BRAND};
+    }
+    
+    h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0;
+    }
+    
+    p {
+        letter-spacing: 0.08em;
+        font-size: 1em;
+        max-width: 75ch;
+        margin-top: 1em;
     }
 
     @media ${device.tablet}{
-        flex-direction: row;
-    } 
+        margin-top: 7em;
+        margin-bottom: 10em;
+    }
+`
+
+const ButtonContainer = styled.div`
+    align-self: flex-start;
+
+    a {
+        margin-left: 0;
+    }
 `
 
 export {
 	HeroContainer,
 	ButtonContainer,
+	HeroText,
+	StyledHero,
 }
