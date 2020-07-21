@@ -1,21 +1,55 @@
 import React from 'react'
-import { StyledFooter, StyledFooterLinks } from './Footer.styled'
-import {
-	TwitterFooter,
-	InstagramFooter,
-	LinkedinFooter,
-	GithubFooter } from '../Icons/Icons'
+import { StyledFooter, StyledFooterLinks, StyledFooterName } from './Footer.styled'
+import { SocialLink } from '../Icons/Icons'
+import { color } from '../colors'
+import { useSiteMetadata } from '../../hooks/use-site-metadata'
 
-const Footer = () => (
-	<StyledFooter>
-		<StyledFooterLinks>
-			<a href="/">Carlos Fegurgur &copy; {new Date().getFullYear()}</a>
-			<a href="https://www.github.com/carlosaqf" target="_blank" rel="noopener noreferrer"><GithubFooter /></a>
-			<a href="https://www.linkedin.com/in/cfegurgur" target="_blank" rel="noopener noreferrer"><LinkedinFooter /></a>
-			<a href="https://www.instagram.com/cfegurgur" target="_blank" rel="noopener noreferrer"><InstagramFooter /></a>
-			<a href="https://www.twitter.com/cfegurgur_" target="_blank" rel="noopener noreferrer"><TwitterFooter /></a>
-		</StyledFooterLinks>
-	</StyledFooter>
-)
+const Footer = () => {
+
+	const { socialLinks } = useSiteMetadata()
+
+	return (
+		<StyledFooter id='connect'>
+
+			<StyledFooterLinks>
+
+				<SocialLink
+					social='Github'
+					link={socialLinks.find(s => s.name === 'Github').link}
+					color={color.SHADE_LIGHT}
+					hover={color.MAIN_BRAND}
+				/>
+				<SocialLink
+					social='Twitter'
+					link={socialLinks.find(s => s.name === 'Twitter').link}
+					color={color.SHADE_LIGHT}
+					hover={color.MAIN_BRAND}
+				/>
+				<SocialLink
+					social='Linkedin'
+					link={socialLinks.find(s => s.name === 'Linkedin').link}
+					color={color.SHADE_LIGHT}
+					hover={color.MAIN_BRAND}
+				/>
+				<SocialLink
+					social='Email'
+					link={socialLinks.find(s => s.name === 'Email').link}
+					color={color.SHADE_LIGHT}
+					hover={color.MAIN_BRAND}
+				/>
+
+			</StyledFooterLinks>
+
+			<StyledFooterName
+				href="/"
+				color={color.SHADE_LIGHT}
+				hover={color.MAIN_BRAND}
+			>
+				Carlos Fegurgur &copy; {new Date().getFullYear()}
+			</StyledFooterName>
+
+		</StyledFooter>
+	)
+}
 
 export default Footer
