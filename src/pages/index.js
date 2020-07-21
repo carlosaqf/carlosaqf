@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Hero from '../components/Hero/Hero'
 import Bio from '../components/Bio/Bio'
 import Projects from '../components/Projects/Projects'
-import Connect from '../components/Connect'
+// import Connect from '../components/Connect/Connect'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
 		<Hero />
 		<Bio />
 		<Projects data={data} />
-		<Connect />
+		{/* <Connect /> */}
 	</Layout>
 )
 
