@@ -11,6 +11,10 @@ export const useSiteMetadata = () => {
                             name
                             link
                         }
+                        socialLinks {
+                            name
+                            link
+                        }
                         description
                         author
                     }
