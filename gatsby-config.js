@@ -20,8 +20,30 @@ module.exports = {
 				link:'/blog'
 			},
 			{
-				name:'contact',
+				name:'connect',
 				link:'/#connect'
+			}
+		],
+		socialLinks:[
+			{
+				name:'Github',
+				link:'https://www.github.com/carlosaqf'
+			},
+			{
+				name:'Twitter',
+				link:'https://www.twitter.com/cfegurgur_'
+			},
+			{
+				name:'Instagram',
+				link:'https://www.instagram.com/cfegurgur'
+			},
+			{
+				name:'Linkedin',
+				link:'https://www.linkedin.com/in/cfegurgur'
+			},
+			{
+				name:'Email',
+				link:'mailto:carlosfegurgur@gmail.com'
 			}
 		],
 		description: 'Personal website of Carlos Fegurgur. A showcase of projects, thoughts and ideas. As well as an insight in to the man behind the screen.',
