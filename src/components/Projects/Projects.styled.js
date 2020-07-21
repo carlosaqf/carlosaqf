@@ -1,45 +1,57 @@
 import styled from 'styled-components'
 import { device }  from '../devices'
+import { color } from '../colors'
 
-const ProjectsContainer = styled.div`
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    
-    a{
-        padding-top: 2rem;
-    }
-    
-    h2{
-        font-size: 2em;
-        letter-spacing: 0.8em;
-        font-weight: 200;
-        padding-top: 1em;   
-    }
-
-    @media ${device.mobileS}{ 
-        h2{
-            font-size: 1.5em;
-            text-align: center;
-        }
-    }
-`
-
-const CardsContainer = styled.div`
+const StyledProjects = styled.div`
+    margin: 5em auto;
     display: flex;
     flex-direction: column;
     max-width: 66em;
-    justify-content: center;
-    align-content: center;
+`
 
-    @media ${device.laptop}{
-        flex-direction: column;
+const ProjectsHeading = styled.h2`
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: 0.8em;
+    text-align: left;
+    text-transform: uppercase;
+    color: ${color.SHADE_DARK};
+    position: relative;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0.5em;
+        background: ${color.MAIN_BRAND};
+        height: 0.08em;
+        width: 3em;
     }
 `
 
+const ProjectsCardsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    /* max-width: 66em; */
+    /* justify-content: center;
+    align-content: center; */
+
+    /* @media ${device.laptop}{
+        flex-direction: column;
+    } */
+`
+
+const ProjectsButton = styled.div`
+    align-self: center;
+    margin-top: 3em;
+`
+
 export {
-	ProjectsContainer,
-	CardsContainer
+	StyledProjects,
+	ProjectsHeading,
+	ProjectsCardsContainer,
+	ProjectsButton
 }

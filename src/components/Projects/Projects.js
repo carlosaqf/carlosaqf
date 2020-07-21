@@ -3,17 +3,19 @@ import React from 'react'
 import Button from '../Buttons'
 import  Card from '../Cards'
 import {
-	ProjectsContainer,
-	CardsContainer
+	StyledProjects,
+	ProjectsHeading,
+	ProjectsCardsContainer,
+	ProjectsButton
 } from './Projects.styled'
 
 
 const Projects = ({ data }) => (
-	<ProjectsContainer>
+	<StyledProjects id='projects'>
 
-		<h2>PROJECTS</h2>
+		<ProjectsHeading>PROJECTS</ProjectsHeading>
 
-		<CardsContainer>
+		<ProjectsCardsContainer>
 			{data.allMarkdownRemark.edges.map(({ node }) => (
 				<Card
 					key={node.id}
@@ -24,16 +26,17 @@ const Projects = ({ data }) => (
 					src={node.frontmatter.image}
 				/>
 			))}
+		</ProjectsCardsContainer>
 
-		</CardsContainer>
+		<ProjectsButton>
+			<Button
+				text='View Work'
+				to='/work'
+				primary
+			/>
+		</ProjectsButton>
 
-		<Button
-			text='See my Work'
-			to='/work'
-			primary
-		/>
-
-	</ProjectsContainer>
+	</StyledProjects>
 )
 
 
