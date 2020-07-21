@@ -1,77 +1,66 @@
 /* eslint-disable linebreak-style */
-import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
-import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
-import  { Github }  from 'styled-icons/boxicons-logos/Github'
-import { Linkedin } from 'styled-icons/boxicons-logos/Linkedin'
-import { color } from '../colors'
-import styled from 'styled-components'
+import  { Github, Linkedin, Twitter }  from 'styled-icons/boxicons-logos'
+import { MailSend } from 'styled-icons/boxicons-regular/MailSend'
+import styled, { css } from 'styled-components'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const TwitterSocial = styled(Twitter)`
-    height: 3em;
-    width: 3em;
-    margin: 10px 3em;
-    :hover{
-        color: ${color.PRIMARY};
-    }
-    
-`
+const SocialLink = (props) => {
 
-const InstagramSocial = styled(Instagram)`
-    height: 3em;
-    width: 3em;
-    margin: 10px 3em;
-    :hover{
-        color: ${color.PRIMARY};
-    }
-`
+	let logo
+	switch (props.social){
+	case 'Github':
+		logo = Github
+		break
+	case 'Linkedin':
+		logo = Linkedin
+		break
+	case 'Twitter':
+		logo = Twitter
+		break
+	case 'Email':
+		logo = MailSend
+		break
+	}
 
-const LinkedinSocial = styled(Linkedin)`
-    height: 3em;
-    width: 3em;
-    margin: 10px 3em;
-    :hover{
-        color: ${color.PRIMARY};
-    }
-`
+	const SocialLogo = styled(logo)`
+		color: ${props => props.color || null};
+		height: 3em;
+		width: 2em;
 
-const GithubSocial = styled(Github)`
-    height: 3em;
-    width: 3em;
-    margin: 10px 3em;
-    font-size: 1em;
-    :hover{
-        color: ${color.PRIMARY};
-    }
-`
+		& :hover{
+			color: ${props.hover};
+		}
 
-const TwitterFooter = styled(Twitter)`
-    color: white;
-    height: 2em;
-`
+		${props => props.footer && css`
+			width: 2em;
+			height: 2em;
+    	`}
+	`
 
-const InstagramFooter = styled(Instagram)`
-    color: white;
-    height: 2em;
-`
+	return (
+		<a
+			href={props.link}
+			target='_blank'
+			rel='noopener noreferrer'
+		>
+			<SocialLogo
+				color={props.color}
+				hover={props.hover}
+				footer={props.footer}
+			/>
+		</a>
+	)
+}
 
-const LinkedinFooter = styled(Linkedin)`
-    color: white;
-    height: 2em;
-`
-
-const GithubFooter = styled(Github)`
-    color: white;
-    height: 2em;
-`
+SocialLink.propTypes = {
+	link: PropTypes.string,
+	color: PropTypes.string,
+	social: PropTypes.string.isRequired,
+	hover: PropTypes.string,
+}
 
 
 export {
-	TwitterSocial,
-	InstagramSocial,
-	LinkedinSocial,
-	GithubSocial,
-	TwitterFooter,
-	InstagramFooter,
-	LinkedinFooter,
-	GithubFooter
+	SocialLink
 }
