@@ -21,7 +21,6 @@ const StyledCard = styled.div`
 
 const CardImg = styled.img`
     margin: 0;
-
 `
 
 const CardInfo = styled.div`
@@ -29,13 +28,12 @@ const CardInfo = styled.div`
     width: 100%;
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 1em;
     
     
-    @media ${device.laptop}{
+    @media ${device.tablet}{
         justify-content: center;
+        align-items: center;
     }
 
 `
