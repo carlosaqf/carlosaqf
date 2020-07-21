@@ -2,12 +2,17 @@ import styled from 'styled-components'
 import { color } from '../colors'
 import { device } from '../devices'
 
+
+const StyledNavbar = styled.div`
+  background: ${color.SHADE_DARK};
+`
+
+
 const NavbarContainer = styled.div`
 
   max-width: 66em;
   margin: 0 auto; 
   display: flex;
-
   justify-content: center;
   padding-top: 1em;
   padding-left: 1em;
@@ -19,18 +24,25 @@ const NavbarContainer = styled.div`
 const NavbarLogo = styled.h1`
   
   margin: 0 auto 0 0;
-  font-size: 1em;
+  font-size: 1.1em;
   text-transform: uppercase;
   align-self: center;
   font-weight: 600;
   
   a {
     letter-spacing: 0.4em;
-    color: ${color.MAIN_BRAND};
+    color: ${color.SHADE_LIGHT};
     text-decoration: none;
     padding: 0.6em;
     padding-left: 0;
+
+    & :hover{
+      color: ${color.MAIN_BRAND};
+    }
+
   }
+
+
 
   li {
     list-style-type: none;
@@ -65,15 +77,18 @@ const NavbarLinks = styled.ul`
   display: none;
   align-items: center;
   font-family: Helvetica;
-  font-size: 1em;
+  font-size: 0.9em;
   
   a{
     text-decoration: none;
-    color: ${color.MAIN_BRAND};
+    color: ${color.SHADE_LIGHT};
     padding: 0.6em;
-    font-weight: 300;
-    font-size: 1em;
+    font-weight: 500;
     transition: all 300ms linear 0s;
+
+    & :hover{
+      color: ${color.MAIN_BRAND};
+    }
   }
   
   & li:nth-child(4){
@@ -91,5 +106,6 @@ const NavbarLinks = styled.ul`
 export {
 	NavbarContainer,
 	NavbarLogo,
-	NavbarLinks
+	NavbarLinks,
+	StyledNavbar
 }
