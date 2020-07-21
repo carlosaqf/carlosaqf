@@ -3,8 +3,8 @@ import { color } from '../colors'
 
 const StyledButton = styled.button`
     background: transparent;
-    border-radius: 3px;
-    border: 2px solid ${color.MAIN_BRAND};
+    border-radius: 1em;
+    border: 0.1em solid ${color.MAIN_BRAND};
     color: white;
     margin: 0 1em;
     padding: 0.25em 1em;
@@ -26,12 +26,10 @@ const StyledButton = styled.button`
     /* DEFINE BUTTON STYLES THROUGH PROPS */
     ${props => props.primary && css`
         background: ${color.MAIN_BRAND};
-        color: ${color.SHADE_LIGHT};
+        color: ${color.SHADE_DARK};
+        margin: 0;
     `}
 
-    ${props => props.secondary && css`
-        background: ${color.BLUE};
-    `}
 `
 
 export {
