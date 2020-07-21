@@ -1,23 +1,69 @@
 import React from 'react'
 import Button from '../Buttons'
+import carlos from '../../images/carlos2.jpeg'
 import {
 	StyledBio,
-	StyledBioCard,
-	StyledBioCardInfo } from './Bio.styled'
+	BioHeading,
+	BioImage,
+	BioText,
+	BioInfo,
+	BioTag
+	// StyledBioCard,
+	// StyledBioCardInfo,
+	// StyledBioCardImg,
+	// StyledBioCardImgContainer
+} from './Bio.styled'
 
 const Bio = () => (
 	<StyledBio id="bio">
-		<h2>ABOUT ME</h2>
+		<BioHeading>About</BioHeading>
 
-		{/* Grid Container */}
+		<BioInfo>
+			<BioImage src={carlos} />
+			<BioText>
+				<h3>Timeline</h3>
+				<p>
+					2016: Graduated from University w/ double major in Computer Science &amp; Mathematics <br/>
+					2017: Year abroad in England (East Yorkshire) <br/>
+					2018: Moved to Chicago <br/>
+					2019: Promotion to Application Support Analyst<br/>
+					2020: Started new position at Strata
+				</p>
+				<h3>Hobbies / Interests</h3>
+				<p>
+					<BioTag>Anime</BioTag>
+					<BioTag>Rugby</BioTag>
+					<BioTag>Coffee</BioTag>
+					<BioTag>Fitness</BioTag>
+					<BioTag>Math</BioTag>
+					<BioTag>Programming</BioTag>
+					<BioTag>Reading</BioTag>
+					<BioTag>Writing</BioTag>
+					<BioTag>Graphic Design</BioTag>
+					<BioTag>Illustration</BioTag>
+					<BioTag>Photography</BioTag>
+				</p>
+				<Button
+					text='Learn More'
+					to='/about'
+					primary
+				/>
+			</BioText>
+		</BioInfo>
+	</StyledBio>
+)
+
+
+/* <h2>ABOUT ME</h2>
+
+
 		<StyledBioCard>
 
-			{/* Grid Item */}
-			{/* <StyledBioCardImgContainer>
-                <StyledBioCardImg src={carlos} />
-            </StyledBioCardImgContainer> */}
 
-			{/* Grid Item */}
+			<StyledBioCardImgContainer>
+				<StyledBioCardImg src={carlos} />
+			</StyledBioCardImgContainer>
+
 			<StyledBioCardInfo>
 				<h3>From the Pacific Ocean to the Great Lakes</h3>
 				<p>Hafa Adai! My name is Carlos Fegurgur and I was born and raised on the island of Guam.
@@ -33,11 +79,7 @@ const Bio = () => (
 				/>
 			</StyledBioCardInfo>
 
-		</StyledBioCard>
+		</StyledBioCard> */
 
-	</StyledBio>
-)
 
 export default Bio
-
-// https://lh3.googleusercontent.com/sUdA70dubPlc8CoLYEgvl6Nch5g2XPcGBfiUcVJUGXIiP_ZcY5Esj6w3RzyVg3l04reGyjSTxib4mOTEov9tmI6V3g8fvceyVVzcWnUbrk-j97MNIOYxmuUdS-QBpA3JBpQdRABlYTBJrFEj7skkJePcAO1I1qNvi69nRH5JuLlrr8FI2PZmvinDbs7NJ0Aj7IPyjD8sHgPadAoxtFVq7-Dtr72R3XK6EOea7L9KW-DVnjgWBInueaAK1t9m62T_OEBmKQTvw-xRZiyTIxG66JobYvWSWYn5sAfnvftI43U4cxBeCb7DzaicTPWVo2LmESK3OfZHMRAaPivOgEGhMYCsmIzfjKkd7vZaRnBDUJdjJIqUHA5FrQxiFOR2S4egwuwH0ffntR-PguX4SSYQm0SENBMDSTtX4ak5h30nPTlSGLUwX6F-GeBUD_Qd5ez_5wHpBGnHwFsqwkOSfx7b9fqs1Inr_pX-CGTvGS5-oULs2B9no1C5Hyoz3Yel6oOrU-vsoVJRctezjPXHmPgMrhEKjFVplCtQFqWeaLLk1j_4xT_E92EgfSjDdh8YXlVx9SjLq3ZpIp5zrUcNNpfBl_iRYV2L7lhz7h2I=s1332-w1000-h1332-no
