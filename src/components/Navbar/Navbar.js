@@ -6,6 +6,7 @@ import {
 	NavbarContainer,
 	NavbarLogo,
 	NavbarLinks,
+	StyledNavbar
 } from './Navbar.styled'
 
 
@@ -16,51 +17,53 @@ const Navbar = () => {
 	const { menuLinks } = useSiteMetadata()
 
 	return(
-		<NavbarContainer>
+		<StyledNavbar>
+			<NavbarContainer>
 
-			<Menu open={open} setOpen={setOpen} id={menuId} />
+				<Menu open={open} setOpen={setOpen} id={menuId} />
 
-			<NavbarLogo>
-				<span className="displayInitials">
+				<NavbarLogo>
+					<span className="displayInitials">
+						<Link
+							page={menuLinks[0].link}
+							text={'CF'}
+						/>
+					</span>
+
+					<span className="displayFullName">
+						<Link
+							page={menuLinks[0].link}
+							text={'CFEGURGUR'}
+						/>
+					</span>
+				</NavbarLogo>
+
+				<NavbarLinks>
 					<Link
-						page={menuLinks[0].link}
-						text={'CF'}
+						page={menuLinks[1].link}
+						text={menuLinks[1].name}
 					/>
-				</span>
-
-				<span className="displayFullName">
 					<Link
-						page={menuLinks[0].link}
-						text={'CFEGURGUR'}
+						page={menuLinks[2].link}
+						text={menuLinks[2].name}
 					/>
-				</span>
-			</NavbarLogo>
+					<Link
+						page={menuLinks[3].link}
+						text={menuLinks[3].name}
+					/>
+					<Link
+						page={menuLinks[4].link}
+						text={menuLinks[4].name}
+					/>
+				</NavbarLinks>
 
-			<NavbarLinks>
-				<Link
-					page={menuLinks[1].link}
-					text={menuLinks[1].name}
+				<Burger
+					open={open}
+					setOpen={setOpen}
+					aria-controls={menuId}
 				/>
-				<Link
-					page={menuLinks[2].link}
-					text={menuLinks[2].name}
-				/>
-				<Link
-					page={menuLinks[3].link}
-					text={menuLinks[3].name}
-				/>
-				<Link
-					page={menuLinks[4].link}
-					text={menuLinks[4].name}
-				/>
-			</NavbarLinks>
-
-			<Burger
-				open={open}
-				setOpen={setOpen}
-				aria-controls={menuId}
-			/>
-		</ NavbarContainer>
+			</ NavbarContainer>
+		</StyledNavbar>
 	)
 }
 
