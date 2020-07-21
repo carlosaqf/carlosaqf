@@ -23,6 +23,10 @@ const StyledMenu = styled.div`
     list-style-type: none;
     font-weight: 300;
 
+    ul {
+        align-self: center;
+    }
+
 `
 
 const MenuLinks = styled.ul`
