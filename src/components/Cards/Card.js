@@ -23,7 +23,9 @@ const Card = ({ title, desc, ...props }) => {
 
 				<CardInfoDescription>{desc}</CardInfoDescription>
 
-				<Button primary {...props}/>
+				<div>
+					<Button primary {...props}/>
+				</div>
 
 			</CardInfo>
 
