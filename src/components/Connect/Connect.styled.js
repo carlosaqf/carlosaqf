@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 // import { device } from './devices'
 import { color } from '../colors'
 
@@ -48,30 +48,63 @@ const ConnectFormContainer = styled.div`
 `
 
 const ConnectForm = styled.form`
-    padding: 1em;
+    /* padding: 1em; */
     display: flex;
     flex-direction: column;
     /* border: 2px solid pink; */
-    max-width: 66em;
+    width: 50vw;
+    max-width: 40em;
     font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 `
 
 const ConnectFormLabel = styled.label`
-	border: 2px solid pink;
+    letter-spacing: 0.7em;
+    font-size: 0.6em;
+    padding-left: 0.5em;
 `
 
 const ConnectFormInput = styled.input`
-	border: 2px solid green;
+    /* border: 2px solid green; */
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    border: none;
+
+    :focus{
+        outline: none;
+    }
+
+    ${props => props.button && css`
+        background: transparent;
+        border-radius: 1em;
+        border: 0.1em solid ${color.MAIN_BRAND};
+        color: white;
+        margin: 0;
+        width: 50%;
+        align-self: center;
+        padding: 0.25em 1em;
+        box-shadow: ${color.SHADOWTWO};
+    
+        &:active{
+            box-shadow: ${color.SHADOWTWO} inset;
+        }
+        
+        background: ${color.MAIN_BRAND};
+        color: ${color.SHADE_DARK};
+    `}
 `
 
 const ConnectFormMessageBox = styled.textarea`
 	height: 10vh;
-	resize: none;
+    resize: none;
+    margin-bottom: 3em;
+    border-radius: 0.5em;
 `
 
 
 const ErrorMessage = styled.span`
     color: red;
+    letter-spacing: 0;
 `
 
 export {
