@@ -10,7 +10,7 @@ const StyledProjects = styled.div`
 `
 
 const ProjectsHeading = styled.h2`
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 200;
     letter-spacing: 0.8em;
     text-align: left;
@@ -19,6 +19,13 @@ const ProjectsHeading = styled.h2`
     position: relative;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
+
+    @media ${device.mobileM}{
+        font-size: 1.8em;
+    }
+    @media ${device.mobileL}{
+        font-size: 2em;
+    }
 
     &::after{
         content: '';
