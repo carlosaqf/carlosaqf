@@ -36,11 +36,6 @@ const BioInfo = styled.div`
     display: flex;
     flex-direction: column;
     margin: 1em;
-    
-    @media ${device.laptop}{
-        /* position: relative; */
-        /* border: 3px solid pink; */
-    }
 `
 
 const BioImage = styled.img`
@@ -52,7 +47,7 @@ const BioText = styled.div`
     background: ${color.SHADE_DARK};
     color: ${color.SHADE_LIGHT};
     padding: 3em 2em;
-    max-width: 75ch;
+    max-width: 66em;
     border-radius: 0 0 1em 1em;
     box-shadow: ${color.SHADOWTWO};
     
