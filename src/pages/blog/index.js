@@ -1,86 +1,96 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import styled from 'styled-components'
-import { device } from '../../components/devices'
+import Card from '../../components/Cards/Card'
+import { color } from '../../components/colors'
 
-const BlogWrapper = styled.div`
+const BlogContainer = styled.div`
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fafafa;
-  padding: 0 1em 0.8em 1em;
-  margin: 0 auto;
-  h2{
-      font-size: 2em;
-      letter-spacing: 0.8em;
-      font-weight: 200;
-      padding-top: 1em;
-      text-align: center;
-      text-transform: uppercase;
-  }
+  margin-bottom: 5em;
+  max-width: 66em;
 `
 
-const BlogPost = styled.div`
-  margin: 1em 2em;
-  text-align: center;
-  background: #c7c7c7;
-  border-radius: 0.5em;
-  width: 60vw;
+const BlogHeading = styled.h2`
+	font-size: 2em;
+	font-weight: 200;
+	letter-spacing: 0.8em;
+	text-transform: uppercase;
+	color: ${color.SHADE_DARK};
+	position: relative;
+	padding-bottom: 0.5em;
+	width: 100%;
+	margin-top: 1.5em;
+	margin-left: 0.5em;
 
-  @media ${device.mobileS}{
-    width: 90vw;
-  }
-
-  @media ${device.laptop}{
-    width: 45vw;
-  }
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: ${color.MAIN_BRAND};
+		height: 0.08em;
+		width: 3em;	
+	}
 `
 
-const BlogImg = styled.img`
-  width: 100vw;
-  height: 40vh;
-  margin: 0 auto;
-  padding: 0;
-  border-radius: 0.5em 0.5em 0 0;
+const BlogBriefing = styled.p`
+	margin-left: 0.5em;
+	margin-bottom: 2em;
+	max-width: 75ch;
+	align-self: flex-start;
+
+	h4 {
+		margin-top: 1em;
+	}
+`
+
+const BlogCardsContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr;
+	max-width: 66em;
+	justify-content: center;
 `
 
 const Blog = ({ data }) => (
 	<Layout>
 		<SEO title="Blog" />
-		<BlogWrapper>
-			<h2>Blog</h2>
-			<p>Welcome to the Blog Page. Here I will explain who I am and what
-          it is I hope to accomplish with this blog. Get to know me!
-			</p>
-			<h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-			{data.allMarkdownRemark.edges.map(({ node }) => (
-				(node.frontmatter.type === 'blog') ? (
-					<BlogPost key={node.id}>
-						<Link
+
+		<BlogContainer>
+
+			<BlogHeading>Blog</BlogHeading>
+
+			<BlogBriefing>
+				Welcome to the Blog Page. Here I will explain who I am and what it is I hope to accomplish with this blog. Get to know me through my writings on various topics and ideas!
+				<h4>
+					{data.allMarkdownRemark.totalCount} Posts
+				</h4>
+			</BlogBriefing>
+
+			<BlogCardsContainer>
+
+				{data.allMarkdownRemark.edges.map(({ node }) => (
+					(node.frontmatter.type === 'blog') ? (
+						<Card
+							key={node.id}
+							title={node.frontmatter.title}
+							desc={(node.frontmatter.description) ? node.frontmatter.description : node.excerpt}
+							text='Read Article'
 							to={node.fields.slug}
-							style={{
-								textDecoration: 'none',
-								color: 'inherit',
-							}}>
-							<BlogImg src={node.frontmatter.image} />
-							<h3 style={{
-								textAlign: 'left',
-								paddingTop: '0.5em',
-								paddingLeft: '0.5em',
-							}}>
-								{node.frontmatter.title} - {node.frontmatter.date}
-							</h3>
-							<p>{node.excerpt}</p>
-						</Link>
-					</BlogPost>
-				) : (
-					null
-				)
-			))}
-		</BlogWrapper>
+							src={node.frontmatter.image}
+						/>
+					) : (null)
+				))}
+
+			</BlogCardsContainer>
+
+		</BlogContainer>
+
 	</Layout>
 )
 
@@ -102,7 +112,8 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             image
             author
-            type
+			type
+			description
           }
           fields {
             slug
