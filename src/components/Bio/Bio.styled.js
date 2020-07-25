@@ -36,11 +36,29 @@ const BioInfo = styled.div`
     display: flex;
     flex-direction: column;
     margin: 1em;
+
+    @media ${device.tablet}{
+        margin: 0;
+    }
+
+    @media ${device.laptop}{
+
+    }
 `
 
 const BioImage = styled.img`
     margin-bottom: 0;
     border-radius: 1em 1em 0 0;
+
+    @media ${device.tablet}{
+        border-radius: 0 1em 1em 0;
+        height: 50%;
+        width: 70%;
+    }
+
+    @media ${device.laptop}{
+        border-radius: 1em;
+    }
 `
 
 const BioText = styled.div`
@@ -51,15 +69,25 @@ const BioText = styled.div`
     border-radius: 0 0 1em 1em;
     box-shadow: ${color.SHADOWTWO};
     
+    @media ${device.tablet}{
+        align-self: flex-end;
+        width: 80%;
+        margin-top: -4em;
+        z-index: -1;
+        border-radius: 1em 0 0 1em;
+
+        h3{
+            margin-top: 2em;
+        }
+    }
+
     @media ${device.laptop}{
-        /* position: absolute;
-        background: rgba(41, 40, 42, 0.8);
-        border-radius: 1em 0 1em 1em;
-        top: 60%;
-        left: 40%;
-        height: auto;
-        z-index: 2; */
         max-width: 100%;
+        border-radius: 1em;
+    }
+
+    button {
+        margin: 0.5em 0;
     }
 
     h3 {
@@ -72,100 +100,12 @@ const BioTag = styled.span`
     color: ${color.SHADE_DARK};
     margin: 0.3em;
     padding: 0.25em 1em;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-shadow: ${color.SHADOWTWO};
     background: ${color.SHADE_LIGHT};
     font-size: 0.7em;
     display: inline-block;
 `
-
-// const StyledBioCard = styled.div`
-//     display: grid;
-//     justify-content: center;
-//     max-width: 66em;
-//     min-height: auto;
-//     padding: 1em;
-//     border: 2px solid green;
-
-//     /* grid-template-columns: 1fr 1fr; */
-
-
-//     @media ${device.mobileS}{
-//         grid-template-columns: 1fr;
-//     }
-//     @media ${device.tablet}{
-//         grid-template-columns: 1fr;
-//     }
-
-//     @media ${device.laptop}{
-//         grid-template-columns: 1fr;
-//     }
-
-// `
-
-// const StyledBioCardInfo = styled.div`
-//     padding: 10px;
-//     display: flex;
-//     flex-direction: column;
-//     border: 2px solid blue;
-
-//     a{
-//         align-self: center;
-//     }
-
-//     h3{
-//         /* EDIT BIO HEADLINE */
-//     }
-
-//     p{
-//         max-width: 90vw;
-//     }
-
-//     @media ${device.mobileS}{
-//         h3{
-//             text-align: center;
-//         }
-//         a{
-//             align-self: center;
-//         }
-//     }
-
-//     @media ${device.mobileL}{
-//         // align-self: start;
-//     }
-
-//     @media ${device.tablet}{
-//         align-self: start;
-//         h3{
-//             text-align: left;
-//         }
-//         a{
-//             align-self: center;
-//         }
-//     }
-
-//     @media ${device.laptop}{
-//         align-self: start;
-//         padding-top: 0;
-//         h3{
-//             text-align: left;
-//         }
-//         a{
-//             align-self: flex-end;
-//         }
-//     }
-// `
-
-// const StyledBioCardImg = styled.img`
-//     max-height: 500px;
-//     max-width: 500px;
-// `
-
-// const StyledBioCardImgContainer = styled.div`
-//     display: block;
-//     width: auto;
-//     height: auto;
-// `
 
 export {
 	StyledBio,
@@ -174,9 +114,5 @@ export {
 	BioText,
 	BioInfo,
 	BioTag
-	// StyledBioCard,
-	// StyledBioCardInfo,
-	// StyledBioCardImg,
-	// StyledBioCardImgContainer
 }
 
