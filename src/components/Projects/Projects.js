@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import Button from '../Buttons'
-import  Card from '../Cards'
+import Button from '../Buttons/Button'
+import  Card from '../Cards/Card'
 import {
 	StyledProjects,
 	ProjectsHeading,
 	ProjectsCardsContainer,
 	ProjectsButton
 } from './Projects.styled'
+import carlos from '../../images/carlos2.jpeg'
 
 
 const Projects = ({ data }) => (
@@ -21,9 +22,10 @@ const Projects = ({ data }) => (
 					key={node.id}
 					title={node.frontmatter.title}
 					desc={(node.frontmatter.description) ? node.frontmatter.description : node.excerpt}
-					text='More Info'
+					text='More Information'
 					to={node.fields.slug}
-					src={node.frontmatter.image}
+					src={node.frontmatter.image ? node.frontmatter.image : carlos}
+					tags={node.frontmatter.tags}
 				/>
 			))}
 		</ProjectsCardsContainer>
