@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Buttons'
+import Button from '../Buttons/Button'
 import carlos from '../../images/carlos2.jpeg'
 import {
 	StyledBio,
@@ -8,10 +8,6 @@ import {
 	BioText,
 	BioInfo,
 	BioTag
-	// StyledBioCard,
-	// StyledBioCardInfo,
-	// StyledBioCardImg,
-	// StyledBioCardImgContainer
 } from './Bio.styled'
 
 const Bio = () => (
@@ -23,11 +19,11 @@ const Bio = () => (
 			<BioText>
 				<h3>Timeline</h3>
 				<p>
-					2016: Graduated from University w/ double major in Computer Science &amp; Mathematics <br/>
+					2016: Graduated from University of Guam w/ double major in Computer Science &amp; Mathematics <br/>
 					2017: Year abroad in England (East Yorkshire) <br/>
 					2018: Moved to Chicago <br/>
-					2019: Promotion to Application Support Analyst<br/>
-					2020: Started new position at Strata
+					2019: 1 year experience in IT<br/>
+					2020: Started Web Development Freelancing
 				</p>
 				<h3>Hobbies / Interests</h3>
 				<p>
@@ -48,6 +44,16 @@ const Bio = () => (
 					to='/about'
 					primary
 				/>
+
+				{/* <Button
+					text='Download Resume'
+					to='../../images/gatsby-icon.png'
+					download='logo'
+					primary
+				/> */}
+				{/* TODO: Update and upload resume file */}
+
+
 			</BioText>
 		</BioInfo>
 	</StyledBio>
