@@ -6,7 +6,7 @@ image: 'https://source.unsplash.com/random/401x401'
 gif: 'use gif'
 author: Carlos Fegurgur
 type: project
-tags: ['React', 'Styled Components']
+tags: ['React', 'HTML']
 repo: https://github.com/carlosaqf/random-quote
 ---
 

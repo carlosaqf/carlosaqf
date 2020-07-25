@@ -2,7 +2,7 @@
 title: "Maiden Blog Voyage"
 description: My reasoning behind starting a blog and why I feel it would be helpful for myself and possibly others.
 date: '2019-04-06'
-image: 'https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+image: 'https://source.unsplash.com/random/402x402'
 author: Carlos Fegurgur
 type: blog
 ---

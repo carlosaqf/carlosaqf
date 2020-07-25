@@ -5,6 +5,8 @@ date: '2020-05-03'
 image: 'https://source.unsplash.com/random/400x400'
 author: Carlos Fegurgur
 type: project
+tags: ['HTML', 'React']
+repo: 'https://github.com/carlosaqf/notes'
 ---
 ## Test Project
 

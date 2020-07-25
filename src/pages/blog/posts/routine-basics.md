@@ -2,7 +2,7 @@
 title: "Refactor your life - Routine Basics"
 description: A look on how we can implement and improve our daily routines.
 date: '2019-04-20'
-image: 'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80'
+image: 'https://source.unsplash.com/random/400x400'
 author: Carlos Fegurgur
 type: blog
 ---
