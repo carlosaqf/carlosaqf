@@ -65,8 +65,8 @@ const ConnectFormLabel = styled.label`
 `
 
 const ConnectFormInput = styled.input`
-    /* border: 2px solid green; */
     margin-bottom: 1em;
+    padding: 0.5em;
     border-radius: 0.5em;
     border: none;
 
@@ -99,6 +99,11 @@ const ConnectFormMessageBox = styled.textarea`
     resize: none;
     margin-bottom: 3em;
     border-radius: 0.5em;
+    padding: 0.5em;
+
+    :focus {
+        outline: none;
+    }
 `
 
 
