@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = {
 	siteMetadata: {
-		title: 'CF | Dev',
+		title: 'Carlos Fegurgur | Portfolio',
 		menuLinks:[
 			{
 				name:'home',
@@ -46,8 +46,8 @@ module.exports = {
 				link:'mailto:carlosfegurgur@gmail.com'
 			}
 		],
-		description: 'Personal website of Carlos Fegurgur. A showcase of projects, thoughts and ideas. As well as an insight in to the man behind the screen.',
-		author: '@carlosaqf',
+		description: 'Personal website of Carlos Fegurgur. A showcase of projects, thoughts and ideas. An insight in to the man behind the screen.',
+		author: '@cfegurgur',
 	},
 	plugins: [
 		{
