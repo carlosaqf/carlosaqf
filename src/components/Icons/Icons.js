@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable linebreak-style */
 import  { Github, Linkedin, Twitter }  from 'styled-icons/boxicons-logos'
 import { MailSend } from 'styled-icons/boxicons-regular/MailSend'
