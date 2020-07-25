@@ -10,7 +10,7 @@ const StyledMenu = styled.div`
 };
     flex-direction: column;
     justify-content: center;
-    background: ${color.WHITE};
+    background: ${color.SHADE_LIGHT};
 
     height: 30vh;
     width: 100vw;
@@ -40,11 +40,14 @@ const MenuLinks = styled.ul`
     
     a{
         text-decoration: none;
-        color: ${color.MAIN_BRAND};
+        color: ${color.SHADE_DARK};
+        :hover{
+            color: ${color.MAIN_BRAND};
+        }
         padding: 0.6em;
         font-weight: 300;
         font-size: 1em;
-        transition: all 300ms linear 0s;
+        /* transition: all 300ms linear 0s; */
     }
 
 `
