@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import styled from 'styled-components'
 import { color } from '../components/colors'
-import Button from '../components/Buttons'
+import Button from '../components/Buttons/Button'
 import gif from '../images/randomQuoteGenerator.gif'
 
 
@@ -13,10 +13,7 @@ const ProjectDiv = styled.div`
 	padding: 1em;
 	max-width: 66em;
 	margin: 0 auto;
-
-	button{
-		margin-left: 0;
-	}
+	font-family: Arial, Helvetica, sans-serif;
 `
 
 const ProjectImg = styled.img`
@@ -30,7 +27,7 @@ const ProjectCaption = styled.figcaption`
 	font-size: 0.8em;
 	text-align: center;
 
-	a{
+	a {
 		text-decoration: none;
 		color: ${color.ACCENT_LIGHT};
 	}
@@ -43,7 +40,15 @@ const ProjectInfo = styled.h4`
 `
 
 const ProjectBody = styled.div`
+	margin-bottom: 2em;
+`
 
+const ProjectButtonContainer = styled.div`
+	button {
+		margin: 1em;
+		margin-left: 0;
+	}
+	margin-bottom: 2em;
 `
 
 const ProjectTag = styled.span`
@@ -71,6 +76,8 @@ export default ({ data }) => {
 			<ProjectDiv>
 				<h1>{post.frontmatter.title}</h1>
 				<ProjectInfo>{post.frontmatter.date}</ProjectInfo>
+
+				{/* Displays array of tags as spans if any exist in the project markdown */}
 				{(post.frontmatter.tags) ? (
 					<ProjectTagDiv>
 						{post.frontmatter.tags.map((tag, key) => (
@@ -90,16 +97,20 @@ export default ({ data }) => {
 					</figure>
 				)}
 				<ProjectBody dangerouslySetInnerHTML={{ __html: post.html }} />
-				<Button
-					text='View Source Code'
-					to={post.frontmatter.repo}
-					primary
-				/>
-				<Button
-					text='Back to all Projects'
-					to='/work'
-					primary
-				/>
+
+				<ProjectButtonContainer>
+					<Button
+						text='View Source Code'
+						to={post.frontmatter.repo}
+						primary
+					/>
+					<Button
+						text='Back to all Projects'
+						to='/work'
+						primary
+					/>
+				</ProjectButtonContainer>
+
 			</ProjectDiv>
 		</Layout>
 	)
