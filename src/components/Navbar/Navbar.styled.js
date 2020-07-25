@@ -42,8 +42,6 @@ const NavbarLogo = styled.h1`
 
   }
 
-
-
   li {
     list-style-type: none;
   }
