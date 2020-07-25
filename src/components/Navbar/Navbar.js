@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Burger, Menu } from '../../components'
-import Link from '../Links/index'
+import Menu from '../Menu/Menu'
+import Burger from '../Burger/Burger'
+import Link from '../Links/Link'
+import { color } from '../colors'
 import { useSiteMetadata } from '../../hooks/use-site-metadata'
 import {
 	NavbarContainer,
@@ -42,18 +44,22 @@ const Navbar = () => {
 					<Link
 						page={menuLinks[1].link}
 						text={menuLinks[1].name}
+						activeStyle={color.MAIN_BRAND}
 					/>
 					<Link
 						page={menuLinks[2].link}
 						text={menuLinks[2].name}
+						activeStyle={color.MAIN_BRAND}
 					/>
 					<Link
 						page={menuLinks[3].link}
 						text={menuLinks[3].name}
+						activeStyle={color.MAIN_BRAND}
 					/>
 					<Link
 						page={menuLinks[4].link}
 						text={menuLinks[4].name}
+						activeStyle={color.MAIN_BRAND}
 					/>
 				</NavbarLinks>
 
