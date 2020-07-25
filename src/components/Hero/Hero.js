@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react'
-import Button from '../Buttons'
+import Button from '../Buttons/Button'
 import { HeroContainer, HeroText, ButtonContainer, StyledHero } from './Hero.styled'
 
 const Hero = () => {
