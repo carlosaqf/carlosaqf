@@ -4,20 +4,42 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Card from '../components/Cards'
+import Card from '../components/Cards/Card'
+import { color } from '../components/colors'
+import Button from '../components/Buttons/Button'
 
 const WorkContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5em;
+  max-width: 66em;
+`
 
-  h2{
+const WorkHeading = styled.h2`
 	font-size: 2em;
-	letter-spacing: 0.8em;
 	font-weight: 200;
-	padding-top: 1em;
-  }
+	letter-spacing: 0.8em;
+	text-align: left;
+	text-transform: uppercase;
+	color: ${color.SHADE_DARK};
+	position: relative;
+	padding-bottom: 0.5em;
+	width: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+	margin-left: 0.5em;
+
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: ${color.MAIN_BRAND};
+		height: 0.08em;
+		width: 3em;
+	}
 `
 
 const CardsContainer = styled.div`
@@ -27,13 +49,23 @@ const CardsContainer = styled.div`
 	justify-content: center;
 `
 
+const WorkConnectSection = styled.div`
+	margin-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h3{
+
+	}
+`
+
 const Work = ({ data }) => (
 	<Layout>
 		<SEO title="Work" />
 
 		<WorkContainer>
 
-			<h2>Work</h2>
+			<WorkHeading>Work</WorkHeading>
 
 			<CardsContainer>
 				{data.allMarkdownRemark.edges.map(({ node }) => (
@@ -41,12 +73,23 @@ const Work = ({ data }) => (
 						key={node.id}
 						title={node.frontmatter.title}
 						desc={(node.frontmatter.description) ? node.frontmatter.description : node.excerpt}
-						text='More Info'
+						text='More Information'
 						to={node.fields.slug}
 						src={node.frontmatter.image}
+						tags={node.frontmatter.tags}
+						repo={node.frontmatter.repo}
 					/>
 				))}
 			</CardsContainer>
+
+			<WorkConnectSection>
+				<h3>Interested in working with me?</h3>
+				<Button
+					to='/#connect'
+					text='Let&apos;s Connect'
+					primary
+				/>
+			</WorkConnectSection>
 
 		</WorkContainer>
 
@@ -73,6 +116,8 @@ export const query = graphql`
 			author
 			type
 			description
+			tags
+			repo
           }
           fields {
             slug
