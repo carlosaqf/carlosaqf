@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => (
 	}}>
 		<SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 		<Hero />
-		<Bio />
 		<Projects data={data} />
+		<Bio />
 		<Connect />
 	</Layout>
 )
@@ -38,6 +38,7 @@ query{
 					author
 					type
 					description
+					tags
 				}
 				fields {
 					slug
