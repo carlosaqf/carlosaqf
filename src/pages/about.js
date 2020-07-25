@@ -3,41 +3,57 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import styled from 'styled-components'
 import { device } from '../components/devices'
+import { color } from '../components/colors'
+// import carlos from '../images/carlos2.jpeg'
 
 const AboutContainer = styled.div`
-  margin: 0 auto;
-  min-height: 96.5vh;
+	margin: 0 auto;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	margin-bottom: 5em;
+  	max-width: 66em;
 `
 
-const AboutTitle = styled.h1`
-  text-align: center;
-  padding-top: 1.5em;
-  color: white;
+const AboutHeading = styled.h2`
+	font-size: 2em;
+	font-weight: 200;
+	letter-spacing: 0.8em;
+	text-transform: uppercase;
+	color: ${color.SHADE_DARK};
+	position: relative;
+	padding-bottom: 0.5em;
+	width: 100%;
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+	margin-left: 0.5em;
 
-  @media ${device.mobileS}{
-    font-size: 0.7em;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-align: end;
-    padding-top: 11em;
-    padding-right: 0.5em;
-  }
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: ${color.MAIN_BRAND};
+		height: 0.08em;
+		width: 3em;
+	}
 `
 
 const AboutParagraph = styled.p`
-  padding: 2em 1em 0 1em;
-  width: 70vw;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 66em;
+  margin: 0.5em;
+
 `
 
-const AboutPicture = styled.div`
-  background: url("https://lh3.googleusercontent.com/_3DMiHGpuiWhiQmy2-zBnsHUx15bn-584wHHnyBTZnVWtIR9JTeiGEaWNYaExF1zJ4DdkJC4MsMgYAyRN8LaRnaHopLvepUoDga7EWcbRNF6BoAOGWBe_p3eF4X14j3ZQ-xgA6LxAZfBk0xgM4Er7v9WrTUYEiCcydJmxzuuAmpKHfpDfdzMbMbNjhIp3-EzyrXlUA8oi09j7rg_VrNsE6pUujVuAZ2nOemIV6hKc-l3GLCeqGxoEQDw60I3INv01hF8E7kdb9pycq_-JFaIfV3llKxZXpIhCUVjPBH3e-BbM5JgrVWX-jIvOJxP1y23wZQlDSmJzZkezOR6syGomlL2N0FBpOB4XWRy_si7wjD9CoO_T3h0Vhnlsum1WO7cPxMj6UR78GJyzkIGE3Q0uvmHFyxbewISwu5jFILf6jAOrXRS2AkpwxJgVZNGrcXx4Q0q4dN3Nq5Qz7Zqb_xbDMxMSKpEkaSjigEwrJjmV8cBJPl39yWgGDbX7g9ps0H3lYKmI8db2dd7K98XXWtYHR_pvBkWjt5p5LARWgxbSpN1Xmt5QX-qpLDSysR5V3hIP6vJB6hWf4JWN75Bo3CKM2nqVOzDXA5wLM5y=s2364-w2364-h1332-no");
-  background-size: cover;
-  background-position: center;
-  height: 25vh;
-  width: 100vw;
-`
+// const AboutPicture = styled.div`
+// 	/* background: url('https://lh3.googleusercontent.com/KHqDj8-xQ7QUQlSP_9zeJ2yjgwnotdDikNVlKBaD9H-xflulhh2AAB3vEpr3xZxM9IWVQCXn3pCGfddqk2-GvHLWzaaeHus_0CnNG5W-0QHR_hi6-OqYwXUlRm1HVxY9o916HWmBiPOBOwQAnBoTL0By15t1lcTZmL9o5dq_5xyFuL8ZD4JEsc7iyd17aMJMg-VcjtMvla0QPYZEmxk-Q97ZZ07KjykDABo5OmEaKDHjrbQy0gnNo1aR8-bBFtOQlNXfaRohKb3K-f12e4KCq91PO-Mvz8nKPHkdqIt4F1dHRF7-UxDDgeoXrV5dSnhMZqdhdB8YpIxDJL4vOBslQYLw_36J0vcNIqeAf65Ou1yR8888rrhhepWnFiRl7Gv9y6eag1ZS_TZIQS-wEAbwzH_B7pVSCo9xq67Yb2XzSakqwx4VuyPpQfZKvlZd_A9GG4X1-5pHG0kX6wASifk94MrT4hXJV6HUV7d-SRzLZuzd3Hn6bUk1StcWvV2RuRDPLOXtFQ1b0gj-LuKJnwMHh1J-CiY83dXBimQXQlvRkiEhUqqz4Osd45vdliTKgfaitykeWxgOkd02lmaBsBVQl0M3XVA5SJ5ASkPGWETCb92ky_NTmbJuAQ9Mg3rotUjyt58bbifbiT_lKh_0ymQ0ZZwe8q4yl3_9p52_nUy0zSm0hzgKguPtZs7wq5em7wiqvQYcvVZieQ=s2364-w2364-h1332-no');	 */
+// 	background: url(${carlos});
+// 	background-size: cover;
+//   	background-position: center;
+// 	height: 400px;
+// 	width: 100%;
+// 	margin-bottom: 2em;
+// `
 
 const AboutSubheading = styled.h3`
   @media ${device.mobileS}{
@@ -49,32 +65,24 @@ const AboutSubheading = styled.h3`
 const About = () => (
 	<Layout>
 		<SEO title="About" />
+
 		<AboutContainer>
-			<AboutPicture>
-				<AboutTitle>Tumon, Guam</AboutTitle>
-			</AboutPicture>
+
+			<AboutHeading>About</AboutHeading>
+
 			<AboutParagraph>
-
-				<AboutSubheading>A Brief History</AboutSubheading>
-        In 2016, I graduated with a double major in Mathematics and Computer Science from the University of Guam.
-        I then spent the next year living and playing rugby in England and travelling the globe.
-        I returned home to Guam in late 2017, made the decision to move to the continental United States, and by Summer 2018,
-        I had fully relocated to the city of Chicago.
-
-				<AboutSubheading top="1">Looking Forward</AboutSubheading>
-
+				<AboutSubheading>COMING SOON!</AboutSubheading>
+				Please pardon my progress as this site undergoes some much needed updates.
+				{/* <AboutPicture /> */}
+				{/* I am an aspiring Web Developer currently based in Chicago, IL.
+				Eiusmod cillum voluptate laboris incididunt et amet dolore pariatur reprehenderit proident. Culpa eiusmod laborum sunt occaecat labore cupidatat tempor minim exercitation tempor in culpa minim est. Esse nisi cupidatat do aliqua minim pariatur est proident non culpa.
+				Consectetur anim dolore officia excepteur cupidatat fugiat adipisicing minim consectetur do. Occaecat nulla laboris voluptate excepteur Lorem mollit. Sit mollit veniam Lorem consectetur commodo labore eu enim mollit. Dolor pariatur nulla occaecat ullamco nisi esse nulla Lorem exercitation.
+				Aliquip consectetur do nostrud in. Ullamco amet ullamco officia aliquip qui. */}
 			</AboutParagraph>
+
 		</AboutContainer>
+
 	</Layout>
 )
 
 export default About
-
-
-// I am passionate about solving problems; breaking things apart until I can find
-// what is needed to fix it brings me joy. I also consider myself to be a lifelong learning
-// and am constantly looking for new and interesting tidbits of knowledge.
-// Programming allows me to bridge these two interests together.
-
-// I'd love to _learn_ about how I can _solve_ your _problems_, especially if the
-// solution involves a web application of some kind. I'm only an email away!
