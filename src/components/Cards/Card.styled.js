@@ -9,18 +9,25 @@ const StyledCard = styled.div`
     box-shadow: ${color.SHADOWTWO};
     background: ${color.SHADE_LIGHT};
     color: ${color.SHADE_DARK};
+    border-radius: 1em;
     
     @media ${device.tablet}{
         flex-direction: row;
     }
 
     @media ${device.laptopL}{
-        min-width: 66em;
+        max-width: 66em;
     }
 `
 
 const CardImg = styled.img`
     margin: 0;
+    border-radius: 1em 1em 0 0;
+    
+    @media ${device.tablet}{
+        max-width: 400px;
+        border-radius: 1em 0 0 1em;
+    }
 `
 
 const CardInfo = styled.div`
@@ -40,10 +47,31 @@ const CardInfo = styled.div`
 
 const CardInfoHeader = styled.h3`
     text-transform: capitalize;
+    margin-bottom: 0.5em;
+    display: flex;
 `
 
 const CardInfoDescription = styled.p`
+`
 
+const CardInfoStack = styled.span`
+    margin-left: auto;
+`
+
+const CardButtonContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin: 0.5em 0;
+    }
+
+    @media ${device.tablet}{
+        flex-direction: row;
+        a {
+            margin: 0 0.5em;
+        }
+    }
 `
 
 export {
@@ -51,5 +79,7 @@ export {
 	CardImg,
 	CardInfo,
 	CardInfoHeader,
-	CardInfoDescription
+	CardInfoDescription,
+	CardInfoStack,
+	CardButtonContainer
 }
