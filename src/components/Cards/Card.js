@@ -1,13 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import Button from '../Buttons'
+import Button from '../Buttons/Button'
 import {
 	StyledCard,
 	CardImg,
 	CardInfo,
 	CardInfoHeader,
-	CardInfoDescription
+	CardInfoDescription,
+	CardInfoStack,
+	CardButtonContainer
 } from './Card.styled'
+import { StackIcon } from '../Icons/StackIcons'
+import { color } from '../colors'
 
 const Card = ({ title, desc, ...props }) => {
 
@@ -19,13 +23,31 @@ const Card = ({ title, desc, ...props }) => {
 
 			<CardInfo>
 
-				<CardInfoHeader>{title}</CardInfoHeader>
+				<CardInfoHeader>
+					{title}
+
+					{(props.tags) ? (
+						<CardInfoStack>
+							{props.tags.map((tag, i) => (
+								<StackIcon
+									key={i}
+									stack={tag}
+									color={color.ACCENT_LIGHT}
+								/>
+							))}
+						</CardInfoStack>
+					):(null)}
+
+				</CardInfoHeader>
 
 				<CardInfoDescription>{desc}</CardInfoDescription>
 
-				<div>
+				<CardButtonContainer>
 					<Button primary {...props}/>
-				</div>
+					{(props.repo) ? (
+						<Button primary text='Source Code' to={props.repo} />
+					):(null)}
+				</CardButtonContainer>
 
 			</CardInfo>
 
