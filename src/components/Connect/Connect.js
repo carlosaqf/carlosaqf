@@ -47,7 +47,6 @@ const Connect = () => {
 			.then(() => navigate(form.getAttribute('action')))
 			.catch((error) => alert(error))
 		console.log(data)
-		// alert(`${data.message}. Nice to meet you ${data.name.split(' ')[0]}`)
 	}
 
 

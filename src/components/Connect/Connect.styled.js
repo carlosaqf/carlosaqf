@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-// import { device } from './devices'
+import { device } from '../devices'
 import { color } from '../colors'
 
 const StyledConnect = styled.div`
@@ -48,10 +48,8 @@ const ConnectFormContainer = styled.div`
 `
 
 const ConnectForm = styled.form`
-    /* padding: 1em; */
     display: flex;
     flex-direction: column;
-    /* border: 2px solid pink; */
     width: 50vw;
     max-width: 40em;
     font-family: Arial, Helvetica, sans-serif;
@@ -75,22 +73,31 @@ const ConnectFormInput = styled.input`
     }
 
     ${props => props.button && css`
-        background: transparent;
-        border-radius: 1em;
-        border: 0.1em solid ${color.MAIN_BRAND};
-        color: white;
-        margin: 0;
-        width: 50%;
-        align-self: center;
-        padding: 0.25em 1em;
+        background: ${color.MAIN_BRAND};
+        border-radius: 0.5em;
+        border: none;
+        padding: 0.5em 1.25em;
         box-shadow: ${color.SHADOWTWO};
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
     
+        a{
+            text-decoration: none;
+            color: ${color.SHADE_DARK};
+            
+            &:hover{
+                color: ${color.SHADE_LIGHT};
+                transition: all 200ms linear 0s;
+            }
+        }
+
         &:active{
             box-shadow: ${color.SHADOWTWO} inset;
         }
-        
-        background: ${color.MAIN_BRAND};
-        color: ${color.SHADE_DARK};
+
+        :focus:not(:focus-visible) { 
+            outline: 0; 
+        }
     `}
 `
 
