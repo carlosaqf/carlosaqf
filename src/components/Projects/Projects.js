@@ -24,8 +24,10 @@ const Projects = ({ data }) => (
 					desc={(node.frontmatter.description) ? node.frontmatter.description : node.excerpt}
 					text='More Information'
 					to={node.fields.slug}
-					src={node.frontmatter.image ? node.frontmatter.image : carlos}
+					// src={node.frontmatter.image ? node.frontmatter.image : carlos}
+					src={node.frontmatter.image}
 					tags={node.frontmatter.tags}
+					repo={node.frontmatter.repo}
 				/>
 			))}
 		</ProjectsCardsContainer>
@@ -34,7 +36,8 @@ const Projects = ({ data }) => (
 			<Button
 				text='View Work'
 				to='/work'
-				primary
+				secondary
+				inverse
 			/>
 		</ProjectsButton>
 
