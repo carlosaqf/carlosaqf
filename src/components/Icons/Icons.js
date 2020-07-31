@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable linebreak-style */
 import  { Github, Linkedin, Twitter }  from 'styled-icons/boxicons-logos'
-import { MailSend } from 'styled-icons/boxicons-regular/MailSend'
+import { MailSend, LinkExternal } from 'styled-icons/boxicons-regular'
 import styled, { css } from 'styled-components'
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -21,6 +21,9 @@ const SocialLink = (props) => {
 		break
 	case 'Email':
 		logo = MailSend
+		break
+	case 'External':
+		logo = LinkExternal
 		break
 	}
 
