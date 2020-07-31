@@ -13,16 +13,17 @@ const StyledBurger = styled.div`
 
 const BurgerLine = styled.span`
 	
-	background: ${color.MAIN_BRAND};
+	background: ${({ open }) => open ? `${color.MAIN_BRAND}` : `${color.SHADE_LIGHT}`};
 	width: 1.7em;
 	height: 0.16em;
 	border-radius: 0.5em;
-	transition: all 0.3s linear;
+	transition: transform 0.3s linear;
 	transform-origin: 0.25em;
 	z-index: 2;
 
 	:first-child {
-		transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'}
+		transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+		
     }
 
 	:nth-child(2){
