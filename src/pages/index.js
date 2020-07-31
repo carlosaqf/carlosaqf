@@ -39,6 +39,7 @@ query{
 					type
 					description
 					tags
+					repo
 				}
 				fields {
 					slug
