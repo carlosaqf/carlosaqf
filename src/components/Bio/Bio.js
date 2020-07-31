@@ -11,19 +11,18 @@ import {
 } from './Bio.styled'
 
 const Bio = () => (
-	<StyledBio id="bio">
+	<StyledBio id="about">
 		<BioHeading>About</BioHeading>
 
 		<BioInfo>
 			<BioImage src={carlos} />
 			<BioText>
-				<h3>Timeline</h3>
-				<p>
-					2016: Graduated from University of Guam w/ double major in Computer Science &amp; Mathematics <br/>
-					2017: Year abroad in England (East Yorkshire) <br/>
-					2018: Moved to Chicago <br/>
-					2019: 1 year experience in IT<br/>
-					2020: Started Web Development Freelancing
+				<h3>Who am I?</h3>
+				<p>Hafa Adai, you can call me Los! I was born and raised on the island of Guam and moved to Chicago in 2018, 
+				a couple of years after graduating with a double major in Mathematics and Computer Science.<br/><br/>
+				I play Rugby (back three) as often as I can and generally enjoy finding new ways of staying active. <br/><br/>
+				I&apos;m always looking for a <a href='https://www.goodreads.com/user/show/93571528-carlos-fegurgur'>good read</a> so send me your recommendations! <br/><br/>
+				I have too many interests and hobbies (listed below), but above all else I enjoy solving problems and use programming as a way to do so!
 				</p>
 				<h3>Hobbies / Interests</h3>
 				<p>
@@ -40,52 +39,14 @@ const Bio = () => (
 					<BioTag>Photography</BioTag>
 				</p>
 				<Button
-					text='Learn More'
-					to='/about'
+					text='Let&apos;s Talk!'
+					to='/#connect'
 					primary
 				/>
-
-				{/* <Button
-					text='Download Resume'
-					to='../../images/gatsby-icon.png'
-					download='logo'
-					primary
-				/> */}
-				{/* TODO: Update and upload resume file */}
-
 
 			</BioText>
 		</BioInfo>
 	</StyledBio>
 )
-
-
-/* <h2>ABOUT ME</h2>
-
-
-		<StyledBioCard>
-
-
-			<StyledBioCardImgContainer>
-				<StyledBioCardImg src={carlos} />
-			</StyledBioCardImgContainer>
-
-			<StyledBioCardInfo>
-				<h3>From the Pacific Ocean to the Great Lakes</h3>
-				<p>Hafa Adai! My name is Carlos Fegurgur and I was born and raised on the island of Guam.
-                I have recently relocated to the city of Chicago with the hopes of breaking in to the tech industry
-                and ultimately become a full time web developer. I enjoy working on side projects and solving problems in general,
-                however, you can also catch me going to the gym, playing board games / sports, or looking for the next best cup of coffee. Learn
-                more about me, what I have done and what I could potentially do for you below!
-				</p>
-				<Button
-					text='Read More'
-					to='/about'
-					primary
-				/>
-			</StyledBioCardInfo>
-
-		</StyledBioCard> */
-
 
 export default Bio

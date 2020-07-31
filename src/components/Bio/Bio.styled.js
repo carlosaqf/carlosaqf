@@ -54,6 +54,7 @@ const BioImage = styled.img`
         border-radius: 0 1em 1em 0;
         height: 50%;
         width: 70%;
+        z-index: 1;
     }
 
     @media ${device.laptop}{
@@ -73,12 +74,13 @@ const BioText = styled.div`
         align-self: flex-end;
         width: 80%;
         margin-top: -4em;
-        z-index: -1;
+        /* z-index: -1; */
         border-radius: 1em 0 0 1em;
 
         h3{
             margin-top: 2em;
         }
+
     }
 
     @media ${device.laptop}{
@@ -92,6 +94,10 @@ const BioText = styled.div`
 
     h3 {
         margin-bottom: 0.5em;
+    }
+
+    p a{
+        color: ${color.SHADE_LIGHT};
     }
 `
 
