@@ -104,11 +104,11 @@ export default ({ data }) => {
 						to={post.frontmatter.repo}
 						primary
 					/>
-					<Button
+					{/* <Button
 						text='Back to all Projects'
-						to='/work'
+						to='/#projects'
 						primary
-					/>
+					/> */}
 				</ProjectButtonContainer>
 
 			</ProjectDiv>
