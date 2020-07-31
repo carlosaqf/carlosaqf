@@ -51,11 +51,11 @@ const Navbar = () => {
 						text={menuLinks[2].name}
 						activeStyle={color.MAIN_BRAND}
 					/>
-					<Link
+					{/* <Link
 						page={menuLinks[3].link}
 						text={menuLinks[3].name}
 						activeStyle={color.MAIN_BRAND}
-					/>
+					/> */}
 					<Link
 						page={menuLinks[4].link}
 						text={menuLinks[4].name}
