@@ -7,7 +7,7 @@ import { StyledFooterLinks } from '../Footer/Footer.styled'
 import { SocialLink } from '../Icons/Icons'
 import { color } from '../colors'
 
-const Menu = ({ open, ...props }) => {
+const Menu = ({ open, setOpen, ...props }) => {
 
 	const { menuLinks } = useSiteMetadata()
 	const { socialLinks } = useSiteMetadata()
@@ -21,18 +21,30 @@ const Menu = ({ open, ...props }) => {
 				<Link
 					page={menuLinks[1].link}
 					text={menuLinks[1].name}
+					onClick={() => {
+						setOpen(!open)
+					}}
 				/>
 				<Link
 					page={menuLinks[2].link}
 					text={menuLinks[2].name}
+					onClick={() => {
+						setOpen(!open)
+					}}
 				/>
-				<Link
+				{/* <Link
 					page={menuLinks[3].link}
 					text={menuLinks[3].name}
-				/>
+					onClick={() => {
+						setOpen(!open)
+					}}
+				/> */}
 				<Link
 					page={menuLinks[4].link}
 					text={menuLinks[4].name}
+					onClick={() => {
+						setOpen(!open)
+					}}
 				/>
 			</MenuLinks>
 
