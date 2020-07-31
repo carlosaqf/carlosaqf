@@ -15,11 +15,11 @@ export const color = {
     0 41.8px 33.4px rgba(0, 0, 0, 0.05),
     0 100px 80px rgba(0, 0, 0, 0.07)
   `,
-	SHADOWTWO: '0 3px 4px 0 rgba(0,0,0,0.5)',
+	SHADOWTWO: '0 2px 6px 0 rgba(0,0,0,0.5)',
 
 	SHADE_LIGHT: '#F2F2F2',
 	ACCENT_LIGHT: '#858C8E',
-	MAIN_BRAND: '#F1C40F',
+	MAIN_BRAND: '#F1C40F', //	hsl(48, 89%, 50%)
 	ACCENT_DARK: '#2C3E50',
 	SHADE_DARK: '#29282A'
 
