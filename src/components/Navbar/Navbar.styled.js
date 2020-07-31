@@ -31,13 +31,14 @@ const NavbarLogo = styled.h1`
   
   a {
     letter-spacing: 0.4em;
-    color: ${color.SHADE_LIGHT};
+    color: ${color.MAIN_BRAND};
     text-decoration: none;
     padding: 0.6em;
     padding-left: 0;
+    transition: all 300ms linear 0s;
 
     & :hover{
-      color: ${color.MAIN_BRAND};
+      color: ${color.SHADE_LIGHT};
     }
 
   }
