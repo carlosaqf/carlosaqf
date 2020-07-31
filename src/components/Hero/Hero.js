@@ -9,22 +9,21 @@ const Hero = () => {
 		<HeroContainer>
 			<StyledHero>
 				<HeroText>
-					<h3>Hafa Adai, I&apos;m</h3>
-					<h1>Carlos Fegurgur</h1>
-					<p>I am a Front End Web Developer originally from the island of Guam, now living in Chicago.
-				I am passionate about solving problems and constantly looking for new challenges or ways to
-				learn and improve! I&apos;d love to learn about how I can solve your problems, especially if the
-				solution involves a web application of some kind. I&apos;m only an email away!
-					</p>
+					<h3>Take your ideas</h3>
+					<h1>From Concept to <span>Code</span>.</h1>
+					<h4>Whether it's redesigning, rebranding or creating something new. 
+						I can help transform your ideas into code with clean, SEO-driven, UX friendly websites.
+					</h4>
 					<ButtonContainer>
-						<Button
-							text='Learn More'
-							to='/about'
-							primary
-						/>
 						<Button
 							text='View Work'
 							to='#projects'
+							primary
+						/>
+						<Button
+							text='Learn More'
+							to='#about'
+							secondary
 						/>
 
 					</ButtonContainer>

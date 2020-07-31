@@ -6,6 +6,7 @@ import { device } from '../devices'
 const HeroContainer = styled.div`
     background: ${color.SHADE_DARK};
     
+    /* WAVE */
     &::after{
         content: '';
         display: block;
@@ -32,20 +33,31 @@ const HeroText = styled.div`
     h1 {
         text-transform: uppercase;
         font-size: 4em;
-        color: ${color.MAIN_BRAND};
+        color: ${color.SHADE_LIGHT};
+        margin-bottom: 0.25em;
+
+        span{
+            border-bottom: 0.08em solid ${color.MAIN_BRAND};
+        }
+
     }
     
     h3 {
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 200;
+        font-size: 1.25em;
         margin: 0;
+        letter-spacing: 0.2em;
     }
     
-    p {
-        letter-spacing: 0.08em;
+    h4 {
         font-size: 1em;
+        font-weight: 200;
+        line-height: 1.25em;
         max-width: 75ch;
-        margin-top: 1em;
+        padding-top: 1em;
+        margin-bottom: 3em;
+        letter-spacing: 0.1em;
     }
 
     @media ${device.tablet}{
@@ -56,10 +68,11 @@ const HeroText = styled.div`
 
 const ButtonContainer = styled.div`
     align-self: flex-start;
-
-    a {
-        margin-left: 0;
+    
+    button {
+        margin-right: 0.5em;
     }
+
 `
 
 export {
