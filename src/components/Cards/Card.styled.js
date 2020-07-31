@@ -13,6 +13,7 @@ const StyledCard = styled.div`
     
     @media ${device.tablet}{
         flex-direction: row;
+        border-radius: 1.5em;
     }
 
     @media ${device.laptopL}{
@@ -23,7 +24,7 @@ const StyledCard = styled.div`
 const CardImg = styled.img`
     margin: 0;
     border-radius: 1em 1em 0 0;
-    
+
     @media ${device.tablet}{
         max-width: 400px;
         border-radius: 1em 0 0 1em;
@@ -35,23 +36,26 @@ const CardInfo = styled.div`
     width: 100%;
     display:flex;
     flex-direction: column;
-    padding: 1em;
-    
-    
-    @media ${device.tablet}{
-        justify-content: center;
-        align-items: center;
-    }
-
 `
 
 const CardInfoHeader = styled.h3`
     text-transform: capitalize;
     margin-bottom: 0.5em;
     display: flex;
+    padding: 0.5em;
+    color: ${color.SHADE_DARK};
+    background: rgba(0,0,0,0.08);
+    
+    @media ${device.tablet}{
+        border-radius: 0 1em 0 0;
+    }
+    
 `
 
 const CardInfoDescription = styled.p`
+    padding: 1em 1em;
+    max-width: 75ch;
+
 `
 
 const CardInfoStack = styled.span`
@@ -60,17 +64,14 @@ const CardInfoStack = styled.span`
 
 const CardButtonContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    padding: 0 1em 2em 1em;
 
-    a {
-        margin: 0.5em 0;
+    button{
+        margin-right: 1em;
     }
 
-    @media ${device.tablet}{
-        flex-direction: row;
-        a {
-            margin: 0 0.5em;
-        }
+    a{
+        margin-right: 0.5em;
     }
 `
 
